@@ -1,0 +1,14 @@
+{
+  "profile": {
+    "src": "/portraits/2ns.png",
+    "name": "2ns.png",
+    "width": 1200,
+    "height": 1500
+  },
+  "conference": {
+    "src": "/portraits/1st.png",
+    "name": "1st.png",
+    "width": 1200,
+    "height": 1500
+  }
+}
