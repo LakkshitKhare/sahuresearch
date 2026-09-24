@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
-import { publications, profile } from "@/lib/content";
+import { type Publication, publications, profile } from "@/lib/content";
 import { cn } from "@/utils/cn";
 import { Reveal, SectionHeader, SourceNote } from "./Primitives";
-import { ArrowUpRight, External, Search } from "./Icons";
+import { ArrowUpRight, Search } from "./Icons";
 
 const FILTERS = [
   { id: "all", label: "All" },
@@ -12,7 +12,7 @@ const FILTERS = [
   { id: "earlier", label: "Earlier" },
 ] as const;
 
-type FilterId = (typeof FILTERS)[number]["id"];
+type FilterId = (typeof FILTERS)[number]["id"]; 
 
 function Authors({ value }: { value: string }) {
   const parts = value.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
@@ -31,23 +31,72 @@ function Authors({ value }: { value: string }) {
   );
 }
 
+function PublicationGraphic({ publication }: { publication: Publication }) {
+  const image = publication.tocGraphic?.trim();
+
+  if (image) {
+    return (
+      <div className="group/cover relative aspect-[4/3] overflow-hidden border border-line bg-paper-100 transition-[border-color,transform] duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] hover:border-ink/20">
+        <img
+          src={image}
+          alt={`${publication.title} publication graphic`}
+          loading="lazy"
+          className="h-full w-full object-contain transition-transform duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/cover:scale-[1.02]"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid-fine relative aspect-[4/3] overflow-hidden border border-line bg-paper-100 transition-[border-color,transform] duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] hover:border-ink/20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(36,71,232,0.06),transparent_55%)]" />
+      <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
+        <span className="label text-ink-400">TOC Graphic</span>
+        <span className="mt-3 font-display text-[1.2rem] leading-none tracking-[-0.04em] text-ink-500">
+          Coming soon
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function Publications() {
   const [filter, setFilter] = useState<FilterId>("all");
   const [query, setQuery] = useState("");
+
+  const filters = useMemo(() => {
+    const years = Array.from(new Set(publications.map((pub) => pub.year))).sort((a, b) => b - a);
+    const yearOptions = years.filter((year) => year >= 2020).map((year) => ({
+      id: String(year),
+      label: String(year),
+    }));
+
+    return [
+      { id: "all", label: "All" },
+      ...yearOptions,
+      { id: "earlier", label: "Earlier" },
+    ] as const;
+  }, []);
+
+  type DynamicFilterId = (typeof filters)[number]["id"];
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return publications.filter((pub) => {
       const matchesFilter =
         filter === "all" ||
-        (filter === "earlier" ? pub.year < 2021 : String(pub.year) === filter);
+        (filter === "earlier" ? pub.year < 2020 : String(pub.year) === filter);
       if (!matchesFilter) return false;
       if (!q) return true;
+
+      const keywords = (pub.keywords ?? []).join(" ").toLowerCase();
       return (
         pub.title.toLowerCase().includes(q) ||
         pub.authors.toLowerCase().includes(q) ||
         pub.journal.toLowerCase().includes(q) ||
-        pub.doi.toLowerCase().includes(q)
+        pub.doi.toLowerCase().includes(q) ||
+        String(pub.year).includes(q) ||
+        keywords.includes(q)
       );
     });
   }, [filter, query]);
@@ -68,8 +117,8 @@ export function Publications() {
         <SectionHeader
           index="04"
           eyebrow="Publications"
-          title="Selected Publications"
-          lead="Peer-reviewed journal articles, conference abstracts and proceedings authored or co-authored by the laboratory."
+          title="Publications"
+          lead="Selected research publications spanning electrochemistry, nanotechnology, environmental technologies, sensors and optical bioimaging."
           aside={
             <a
               href={profile.scholar}
@@ -78,27 +127,26 @@ export function Publications() {
               className="btn btn-outline h-11 min-h-11 px-5"
             >
               View Google Scholar Profile
-              <External size={14} />
+              <span aria-hidden="true">↗</span>
             </a>
           }
         />
 
-        {/* ---- Controls ---- */}
-        <Reveal delay={80} className="mt-14 border-y border-line">
-          <div className="flex flex-col gap-5 py-5 lg:flex-row lg:items-center lg:justify-between">
+        <Reveal delay={80} className="mt-12">
+          <div className="flex flex-col gap-4 border-y border-line py-5 lg:flex-row lg:items-center lg:justify-between">
             <div
               role="group"
               aria-label="Filter publications by year"
               className="flex flex-wrap items-center gap-1"
             >
-              {FILTERS.map((f) => (
+              {filters.map((f) => (
                 <button
                   key={f.id}
                   type="button"
-                  onClick={() => setFilter(f.id)}
+                  onClick={() => setFilter(f.id as DynamicFilterId)}
                   aria-pressed={filter === f.id}
                   className={cn(
-                    "min-h-11 px-3.5 text-[0.8125rem] font-medium transition-colors duration-300",
+                    "min-h-11 px-3.5 text-[0.8125rem] font-medium transition-all duration-300 ease-[cubic-bezier(.16,1,.3,1)]",
                     filter === f.id
                       ? "bg-ink text-white"
                       : "text-ink-500 hover:bg-paper-200 hover:text-ink",
@@ -109,7 +157,7 @@ export function Publications() {
               ))}
             </div>
 
-            <div className="relative w-full lg:w-72">
+            <div className="relative w-full lg:max-w-[18rem]">
               <label htmlFor="publication-search" className="sr-only">
                 Search publications
               </label>
@@ -122,85 +170,98 @@ export function Publications() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search title, author, journal…"
+                placeholder="Search publications..."
                 className="h-11 w-full border border-line bg-white pl-9 pr-3 text-[0.875rem] text-ink placeholder:text-ink-400 focus:border-electric focus:outline-none"
               />
             </div>
           </div>
         </Reveal>
 
-        {/* ---- List ---- */}
         <div className="mt-2">
           <p aria-live="polite" className="py-4 font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-ink-400">
             {filtered.length} {filtered.length === 1 ? "publication" : "publications"}
-            {filter !== "all" ? ` · filtered` : ""}
+            {filter !== "all" ? " · filtered" : ""}
           </p>
 
           {grouped.length === 0 ? (
             <div className="border-t border-line py-16 text-center">
               <p className="font-display text-[1.125rem] text-ink">No publications match this search.</p>
               <p className="mt-2 text-[0.9375rem] text-ink-500">
-                Try a different keyword, or view the complete record on Google Scholar.
+                Try a different keyword or browse the complete publication archive on Google Scholar.
               </p>
             </div>
           ) : (
             grouped.map(([year, items]) => (
-              <div key={year}>
-                <div className="flex items-baseline gap-5 border-t border-line pt-7">
-                  <h3 className="font-display text-[2rem] font-medium tracking-[-0.03em] text-ink lg:text-[2.5rem]">
+              <div key={year} className="pt-3">
+                <Reveal delay={60} className="flex items-center gap-4 border-t border-line pt-6">
+                  <h3 className="font-display text-[1.8rem] font-medium tracking-[-0.04em] text-ink lg:text-[2.15rem]">
                     {year}
                   </h3>
                   <span aria-hidden="true" className="h-px flex-1 bg-line" />
-                  <span className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-ink-400">
-                    {items.length} {items.length === 1 ? "entry" : "entries"}
-                  </span>
-                </div>
+                </Reveal>
 
                 <ul className="mt-2">
-                  {items.map((pub) => (
-                    <li key={pub.doi} className="group">
-                      <article className="grid grid-cols-1 gap-x-10 gap-y-3 border-b border-line-soft py-7 transition-colors duration-300 hover:bg-white lg:grid-cols-12">
-                        <div className="lg:col-span-10">
-                          <h4 className="text-[1.0625rem] leading-snug lg:text-[1.1875rem]">
-                            <a
-                              href={pub.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="link-underline font-display font-medium text-ink"
-                            >
-                              {pub.title}
-                            </a>
-                          </h4>
-                          <p className="mt-3 max-w-[70ch] text-[0.875rem] leading-relaxed text-ink-500">
-                            <Authors value={pub.authors} />
-                          </p>
-                          <p className="mt-3 text-[0.875rem] text-ink-600">
-                            <em className="not-italic font-medium">{pub.journal}</em>
-                            <span className="mx-2 text-line" aria-hidden="true">
-                              /
-                            </span>
-                            {pub.volume}
-                          </p>
-                          <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-400">
-                            DOI {pub.doi}
-                          </p>
-                        </div>
-                        <div className="lg:col-span-2 lg:text-right">
-                          <a
-                            href={pub.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex min-h-11 items-center gap-1.5 text-[0.8125rem] font-medium text-ink-500 opacity-70 transition-all duration-300 group-hover:opacity-100 hover:text-electric"
-                          >
-                            View publication
-                            <ArrowUpRight
-                              size={14}
-                              className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                            />
-                            <span className="sr-only">(opens in a new tab)</span>
-                          </a>
-                        </div>
-                      </article>
+                  {items.map((pub, index) => (
+                    <li key={`${pub.doi}-${index}`} className="group/list">
+                      <Reveal delay={60 + index * 60} className="border-b border-line-soft py-6 transition-[background-color] duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] hover:bg-paper-100/70">
+                        <article className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.55fr)] lg:gap-8">
+                          <div className="lg:pr-2">
+                            <PublicationGraphic publication={pub} />
+                          </div>
+
+                          <div className="flex flex-col justify-center">
+                            <div className="flex items-start gap-4">
+                              <span className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-400">
+                                {String(index + 1).padStart(2, "0")}
+                              </span>
+                              <div className="flex-1">
+                                <h4 className="max-w-[32ch] text-[1.12rem] leading-[1.3] text-ink transition-all duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/list:text-ink-700 lg:text-[1.38rem]">
+                                  <a
+                                    href={pub.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 hover:text-electric"
+                                  >
+                                    {pub.title}
+                                    <ArrowUpRight size={15} className="shrink-0 transition-transform duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
+                                  </a>
+                                </h4>
+
+                                <p className="mt-3 max-w-[68ch] text-[0.875rem] leading-relaxed text-ink-500">
+                                  <Authors value={pub.authors} />
+                                </p>
+
+                                <p className="mt-4 font-mono text-[0.65625rem] uppercase tracking-[0.16em] text-ink-400">
+                                  <span className="text-ink-500">{pub.journal.toUpperCase()}</span>
+                                  <span className="mx-2 text-line">·</span>
+                                  {pub.year}
+                                </p>
+
+                                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-[0.75rem] font-medium text-ink-500">
+                                  <a
+                                    href={`https://doi.org/${pub.doi}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 transition-colors duration-300 hover:text-electric"
+                                  >
+                                    DOI
+                                    <ArrowUpRight size={12} className="transition-transform duration-300 group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
+                                  </a>
+                                  <a
+                                    href={pub.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 transition-colors duration-300 hover:text-electric"
+                                  >
+                                    View Publication
+                                    <ArrowUpRight size={12} className="transition-transform duration-300 group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                      </Reveal>
                     </li>
                   ))}
                 </ul>
@@ -217,7 +278,7 @@ export function Publications() {
               href={profile.scholar}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-ink link-underline"
+              className="font-medium text-ink underline-offset-2 hover:underline"
             >
               Google Scholar profile
             </a>

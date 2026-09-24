@@ -240,6 +240,8 @@ export type Publication = {
   volume: string;
   doi: string;
   url: string;
+  tocGraphic?: string;
+  keywords?: string[];
 };
 
 export const publications: Publication[] = [
@@ -252,6 +254,8 @@ export const publications: Publication[] = [
     volume: "39(43), 20896–20907",
     doi: "10.1021/acs.energyfuels.5c02899",
     url: "https://doi.org/10.1021/acs.energyfuels.5c02899",
+    tocGraphic: "",
+    keywords: ["hydrogen generation", "Ru nanoparticles", "electrochemistry", "catalysis"],
   },
   {
     year: 2022,
@@ -262,6 +266,8 @@ export const publications: Publication[] = [
     volume: "7(6), 5001–5007",
     doi: "10.1021/acsomega.1c05847",
     url: "https://doi.org/10.1021/acsomega.1c05847",
+    tocGraphic: "",
+    keywords: ["PFAS", "screen-printed electrode", "sensing", "ionomer coating"],
   },
   {
     year: 2022,
@@ -272,6 +278,8 @@ export const publications: Publication[] = [
     volume: "October 2022",
     doi: "10.1149/MA2022-02491940mtgabs",
     url: "https://doi.org/10.1149/MA2022-02491940mtgabs",
+    tocGraphic: "",
+    keywords: ["CO₂ reduction", "electrolyte ionophore", "electrochemistry"],
   },
   {
     year: 2021,
@@ -282,6 +290,8 @@ export const publications: Publication[] = [
     volume: "1(2), 239–248",
     doi: "10.1021/acsestengg.0c00086",
     url: "https://doi.org/10.1021/acsestengg.0c00086",
+    tocGraphic: "",
+    keywords: ["PFAS", "photocatalysis", "water treatment", "reactor configuration"],
   },
   {
     year: 2021,
@@ -292,6 +302,8 @@ export const publications: Publication[] = [
     volume: "6(17), 11297–11306",
     doi: "10.1021/acsomega.1c00132",
     url: "https://doi.org/10.1021/acsomega.1c00132",
+    tocGraphic: "",
+    keywords: ["phosphate", "printed electrode", "environmental sensing", "water quality"],
   },
   {
     year: 2018,
@@ -303,6 +315,8 @@ export const publications: Publication[] = [
     volume: "5(8), 533–538",
     doi: "10.1021/acs.estlett.8b00395",
     url: "https://doi.org/10.1021/acs.estlett.8b00395",
+    tocGraphic: "",
+    keywords: ["PFAS", "photocatalyst", "degradation", "ultraviolet"],
   },
 ];
 
