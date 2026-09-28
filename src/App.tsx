@@ -8,6 +8,7 @@ import { Publications } from "@/components/Publications";
 import { Facilities } from "@/components/Facilities";
 import { Funding } from "@/components/Funding";
 import { Opportunities } from "@/components/Opportunities";
+import { JoinUs } from "@/components/JoinUs";
 import { Collaboration } from "@/components/Collaboration";
 import { Contact } from "@/components/Contact";
 import { AcademicProfile } from "@/components/AcademicProfile";
@@ -31,6 +32,7 @@ export default function App() {
         <Facilities />
         <Funding />
         <Opportunities />
+        <JoinUs />
         <Collaboration />
         <Contact />
       </main>

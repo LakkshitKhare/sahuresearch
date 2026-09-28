@@ -19,6 +19,7 @@ export const NAV_LINKS = [
   { id: "publications", label: "Publications" },
   { id: "facilities", label: "Facilities" },
   { id: "academic-profile", label: "Academic Profile" },
+  { id: "join-us", label: "Join Us" },
   { id: "contact", label: "Contact" },
 ];
 

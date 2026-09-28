@@ -254,7 +254,7 @@ export const publications: Publication[] = [
     volume: "39(43), 20896–20907",
     doi: "10.1021/acs.energyfuels.5c02899",
     url: "https://doi.org/10.1021/acs.energyfuels.5c02899",
-    tocGraphic: "",
+    tocGraphic: "/portraits/1stpub.png",
     keywords: ["hydrogen generation", "Ru nanoparticles", "electrochemistry", "catalysis"],
   },
   {
@@ -266,20 +266,8 @@ export const publications: Publication[] = [
     volume: "7(6), 5001–5007",
     doi: "10.1021/acsomega.1c05847",
     url: "https://doi.org/10.1021/acsomega.1c05847",
-    tocGraphic: "",
+    tocGraphic: "/portraits/5thpub.png",
     keywords: ["PFAS", "screen-printed electrode", "sensing", "ionomer coating"],
-  },
-  {
-    year: 2022,
-    title: "Insights into the Role of Electrolyte Ionophore on Electrochemical Reduction of CO₂",
-    authors:
-      "Tam Tran, Laibao Zhang, Nengneng Xu, Guanguang Xia, **Sushant Sahu**, Yudong Wang, Xingwen Yu, Xiao-Dong Zhou",
-    journal: "ECS Meeting Abstracts",
-    volume: "October 2022",
-    doi: "10.1149/MA2022-02491940mtgabs",
-    url: "https://doi.org/10.1149/MA2022-02491940mtgabs",
-    tocGraphic: "",
-    keywords: ["CO₂ reduction", "electrolyte ionophore", "electrochemistry"],
   },
   {
     year: 2021,
@@ -290,7 +278,7 @@ export const publications: Publication[] = [
     volume: "1(2), 239–248",
     doi: "10.1021/acsestengg.0c00086",
     url: "https://doi.org/10.1021/acsestengg.0c00086",
-    tocGraphic: "",
+    tocGraphic: "/portraits/impact.png",
     keywords: ["PFAS", "photocatalysis", "water treatment", "reactor configuration"],
   },
   {
@@ -302,7 +290,7 @@ export const publications: Publication[] = [
     volume: "6(17), 11297–11306",
     doi: "10.1021/acsomega.1c00132",
     url: "https://doi.org/10.1021/acsomega.1c00132",
-    tocGraphic: "",
+    tocGraphic: "/portraits/slide12.png",
     keywords: ["phosphate", "printed electrode", "environmental sensing", "water quality"],
   },
   {
@@ -315,7 +303,7 @@ export const publications: Publication[] = [
     volume: "5(8), 533–538",
     doi: "10.1021/acs.estlett.8b00395",
     url: "https://doi.org/10.1021/acs.estlett.8b00395",
-    tocGraphic: "",
+    tocGraphic: "/portraits/slide23.png",
     keywords: ["PFAS", "photocatalyst", "degradation", "ultraviolet"],
   },
 ];

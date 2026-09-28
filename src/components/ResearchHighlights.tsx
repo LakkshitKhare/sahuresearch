@@ -25,7 +25,7 @@ const highlights = [
     description:
       "Nonlinear optical imaging to monitor structure and dynamics at lipid interfaces and cellular membranes.",
     accent: "Optical bioimaging",
-    url: "https://doi.org/10.1021/acs.biochem.4c00788",
+    url: "https://pubs.acs.org/bichaw/article/64/7/1476/3677640/Monitoring-Molecular-Interactions-with-Cell",
     imageSrc: "/portraits/2ndpub.png",
     imageAlt: "Graphical abstract for the SHG cell membrane imaging publication",
     palette: { base: "#dff6f3", glow: "rgba(11,143,166,0.18)" },
@@ -38,7 +38,9 @@ const highlights = [
     description:
       "A template-assisted electrocatalyst design aimed at lowering platinum demand while maintaining efficient HER performance.",
     accent: "Electrocatalysis",
-    url: "https://doi.org/10.1021/acs.langmuir.4c04169",
+    url: "https://doi.org/10.1021/acs.langmuir.4c04383",
+    imageSrc: "/portraits/3rdpub.png",
+    imageAlt: "Graphical abstract for the Mo2C/C hydrogen evolution publication",
     palette: { base: "#e6eefb", glow: "rgba(36,71,232,0.15)" },
   },
   {
@@ -49,7 +51,9 @@ const highlights = [
     description:
       "Fluorinated ionic polymer architectures built to target PFAS contaminants under environmentally relevant conditions.",
     accent: "Water treatment",
-    url: "https://doi.org/10.1016/j.reactfunctpolym.2025.106138",
+    url: "https://www.sciencedirect.com/science/article/pii/S1381514824003134?via%3Dihub",
+    imageSrc: "/portraits/4th.png",
+    imageAlt: "Graphical abstract for the PFAS water treatment publication",
     palette: { base: "#f5ecff", glow: "rgba(104,76,202,0.16)" },
   },
   {
@@ -74,7 +78,7 @@ const highlights = [
       "Visible-light photocatalysis and carbon-based nanomaterials for energy conversion and photochemical processes.",
     accent: "Carbon materials",
     url: "https://doi.org/10.1021/acsami.5b00448",
-    imageSrc: "/portraits/6thpub.png",
+    imageSrc: "/portraits/6th.png",
     imageAlt: "Graphical abstract for the carbon quantum dots photocatalytic energy conversion publication",
     palette: { base: "#f9efe7", glow: "rgba(186,110,50,0.12)" },
   },
