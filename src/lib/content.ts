@@ -251,8 +251,18 @@ function archivedPublication(
   journal: string,
   doi: string,
   volume = "",
+  tocGraphic?: string,
 ): Publication {
-  return { year, title, authors, journal, volume, doi, url: `https://doi.org/${doi}` };
+  return {
+    year,
+    title,
+    authors,
+    journal,
+    volume,
+    doi,
+    url: `https://doi.org/${doi}`,
+    ...(tocGraphic ? { tocGraphic } : {}),
+  };
 }
 
 export const publications: Publication[] = [
@@ -265,7 +275,7 @@ export const publications: Publication[] = [
     volume: "39(43), 20896–20907",
     doi: "10.1021/acs.energyfuels.5c02899",
     url: "https://doi.org/10.1021/acs.energyfuels.5c02899",
-    tocGraphic: "/portraits/1stpub.png",
+    tocGraphic: "/lab/1stpub.png",
     keywords: ["hydrogen generation", "Ru nanoparticles", "electrochemistry", "catalysis"],
   },
   {
@@ -277,11 +287,11 @@ export const publications: Publication[] = [
     volume: "7(6), 5001–5007",
     doi: "10.1021/acsomega.1c05847",
     url: "https://doi.org/10.1021/acsomega.1c05847",
-    tocGraphic: "/portraits/5thpub.png",
+    tocGraphic: "/lab/5thpub.png",
     keywords: ["PFAS", "screen-printed electrode", "sensing", "ionomer coating"],
   },
   {
-    year: 2021,
+    year: 2020,
     title:
       "Impacts of Reactor Configuration, Degradation Mechanisms, and Water Matrices on Perfluorocarboxylic Acid Treatment Efficiency by the UV/Bi₃O(OH)(PO₄)₂ Photocatalytic Process",
     authors: "Mojtaba Qanbarzadeh, Dawei Wang, Mohamed Ateia, **Sushant P. Sahu**, Ezra L. Cates",
@@ -289,7 +299,7 @@ export const publications: Publication[] = [
     volume: "1(2), 239–248",
     doi: "10.1021/acsestengg.0c00086",
     url: "https://doi.org/10.1021/acsestengg.0c00086",
-    tocGraphic: "/portraits/impact.png",
+    tocGraphic: "/lab/impact.png",
     keywords: ["PFAS", "photocatalysis", "water treatment", "reactor configuration"],
   },
   {
@@ -301,7 +311,7 @@ export const publications: Publication[] = [
     volume: "6(17), 11297–11306",
     doi: "10.1021/acsomega.1c00132",
     url: "https://doi.org/10.1021/acsomega.1c00132",
-    tocGraphic: "/portraits/slide12.png",
+    tocGraphic: "/lab/slide12.png",
     keywords: ["phosphate", "printed electrode", "environmental sensing", "water quality"],
   },
   {
@@ -314,7 +324,7 @@ export const publications: Publication[] = [
     volume: "5(8), 533–538",
     doi: "10.1021/acs.estlett.8b00395",
     url: "https://doi.org/10.1021/acs.estlett.8b00395",
-    tocGraphic: "/portraits/slide23.png",
+    tocGraphic: "/lab/slide23.png",
     keywords: ["PFAS", "photocatalyst", "degradation", "ultraviolet"],
   },
   archivedPublication(
@@ -324,6 +334,7 @@ export const publications: Publication[] = [
     "Biochemistry",
     "10.1021/acs.biochem.4c00302",
     "64(7), 1476–1483",
+    "/lab/2ndpub.png",
   ),
   archivedPublication(
     2025,
@@ -332,14 +343,16 @@ export const publications: Publication[] = [
     "Langmuir",
     "10.1021/acs.langmuir.4c04383",
     "41(5), 3392–3401",
+    "/lab/3rdpub.png",
   ),
   archivedPublication(
-    2024,
+    2025,
     "Polystyrene-Based Fluorinated Ionic Receptor for Selective Removal of Perfluoroalkyl Contaminants from Water",
     "**Sushant P. Sahu**, Oluwaseun T. Adeleye, Samuel Antwi, Fabrizio Donnarumma, Nagapradeep Nidamanuri, Rahul Bhise, Eknath Gadekar, Sanjay Sharma, Radhey Srivastava, Yu Wang",
     "Reactive and Functional Polymers",
     "10.1016/j.reactfunctpolym.2024.106138",
     "204, 106138",
+    "/lab/4th.png",
   ),
   archivedPublication(
     2024,
@@ -348,6 +361,7 @@ export const publications: Publication[] = [
     "Biomedical Optics Express",
     "10.1364/BOE.527972",
     "15(10), 5980–5995",
+    "/lab/2024_2.png",
   ),
   archivedPublication(
     2023,
@@ -356,6 +370,7 @@ export const publications: Publication[] = [
     "Polymers",
     "10.3390/polym15020352",
     "15(2), 352",
+    "/lab/2023_1.png",
   ),
   archivedPublication(
     2023,
@@ -364,6 +379,7 @@ export const publications: Publication[] = [
     "Carbon Quantum Dots for Sustainable Energy and Optoelectronics",
     "10.1016/B978-0-323-90895-5.00020-5",
     "2023, Chapter 20",
+    "/lab/2023_2.png",
   ),
   archivedPublication(
     2022,
@@ -372,6 +388,7 @@ export const publications: Publication[] = [
     "Inorganica Chimica Acta",
     "10.1016/j.ica.2022.120871",
     "535, 120871",
+    "/lab/2022_2.png",
   ),
   archivedPublication(
     2021,
@@ -380,6 +397,7 @@ export const publications: Publication[] = [
     "Frontiers in Physiology",
     "10.3389/fphys.2021.704401",
     "12, 704401",
+    "/lab/2021_3.png",
   ),
   archivedPublication(
     2021,
@@ -388,14 +406,16 @@ export const publications: Publication[] = [
     "Chemical Communications",
     "10.1039/d1cc00682g",
     "57(27), 3331–3334",
+    "/lab/2021_4.png",
   ),
   archivedPublication(
-    2021,
+    2022,
     "In utero Exposure to Electronic-Cigarette Aerosols Decreases Lung Fibrillar Collagen Content, Increases Newtonian Resistance and Induces Sex-Specific Molecular Signatures in Neonatal Mice",
     "Kerin M. Cahill, Manas R. Gartia, **Sushant P. Sahu**, Sarah R. Bergeron, Linda M. Heffernan, Daniel B. Paulsen, Arthur L. Penn",
     "Toxicological Research",
     "10.1007/s43188-021-00103-3",
     "37(4), 497–508",
+    "/lab/2022_3.png",
   ),
   archivedPublication(
     2021,
@@ -404,6 +424,7 @@ export const publications: Publication[] = [
     "Inorganics",
     "10.3390/inorganics9070053",
     "9(7), 53",
+    "/lab/2021_5.png",
   ),
   archivedPublication(
     2021,
@@ -412,38 +433,44 @@ export const publications: Publication[] = [
     "Advanced Functional Materials",
     "10.1002/adfm.202103955",
     "31(43), 2103955",
+    "/lab/2021_6.png",
   ),
   archivedPublication(
-    2020,
+    2021,
     "Characterization of Fibrillar Collagen Isoforms in Infarcted Mouse Hearts Using Second Harmonic Generation Imaging",
     "**Sushant P. Sahu**, Qianglin Liu, Alisha Prasad, Syed Mohammad Abid Hasan, Qun Liu, Maria Ximena Bastidas Rodriguez, Orna Mukhopadhyay, David Burk, Joseph Francis, Supratik Mukhopadhyay, Xing Fu, Manas Ranjan Gartia",
     "Biomedical Optics Express",
     "10.1364/BOE.410347",
     "11(11), 6429–6444",
+    "/lab/2021_7.png",
   ),
   archivedPublication(
-    2020,
+    2021,
     "Dark-Field Hyperspectral Imaging (DF-HSI) Modalities for Characterization of Single Molecule and Cellular Processes",
     "Nishir Mehta, **Sushant P. Sahu**, Shahensha Shaik, Ram Devireddy, Manas Ranjan Gartia",
     "Nanophotonics in Biomedical Engineering",
     "10.1007/978-981-15-6137-5_8",
     "2020, 231–262",
+    "/lab/2021_8.png",
+
   ),
   archivedPublication(
-    2020,
+    2021,
     "Dark-Field Hyperspectral Imaging for Label-Free Detection of Nano-Bio-Materials",
     "Nishir Mehta, **Sushant P. Sahu**, Shahensha Shaik, Ram Devireddy, Manas Ranjan Gartia",
     "WIREs Nanomedicine and Nanobiotechnology",
     "10.1002/wnan.1661",
     "13(1), e1661",
+    "/lab/2021_9.png",
   ),
   archivedPublication(
-    2020,
+    2021,
     "Comment on ‘Enhanced Photocatalytic Degradation of Perfluorooctanoic Acid Using Carbon-Modified Bismuth Phosphate Composite: Effectiveness, Material Synergy, and Roles of Carbon’",
     "Ezra L. Cates, Mojtaba Qanbarzadeh, **Sushant P. Sahu**",
     "Chemical Engineering Journal",
     "10.1016/j.cej.2020.127060",
     "404, 127060",
+    "/lab/2021_10.png",
   ),
   archivedPublication(
     2019,
@@ -452,6 +479,7 @@ export const publications: Publication[] = [
     "Nano Letters",
     "10.1021/acs.nanolett.9b02239",
     "19(9), 6192–6202",
+    "/lab/2019_1.png",
   ),
   archivedPublication(
     2019,
@@ -460,6 +488,7 @@ export const publications: Publication[] = [
     "Carbon",
     "10.1016/j.carbon.2019.09.078",
     "",
+    "/lab/2019_2.png",
   ),
   archivedPublication(
     2018,
@@ -468,6 +497,7 @@ export const publications: Publication[] = [
     "Environmental Science & Technology",
     "10.1021/acs.est.7b05941",
     "52(5), 2973–2980",
+    "/lab/2018_2.png",
   ),
   archivedPublication(
     2017,
@@ -476,6 +506,8 @@ export const publications: Publication[] = [
     "Nanomaterials Handbook",
     "10.1201/9781315371795-10",
     "2017, 273–308",
+    "/lab/2017_1.png",
+
   ),
   archivedPublication(
     2017,
@@ -484,6 +516,7 @@ export const publications: Publication[] = [
     "The Journal of Physical Chemistry C",
     "10.1021/acs.jpcc.7b00776",
     "121(19), 10538–10545",
+    "/lab/2017_2.png",
   ),
   archivedPublication(
     2016,
@@ -492,6 +525,7 @@ export const publications: Publication[] = [
     "Environmental Science & Technology",
     "10.1021/acs.est.6b04239",
     "50(21), 11912–11921",
+    "/lab/2016_1.png",
   ),
   archivedPublication(
     2015,
@@ -500,6 +534,7 @@ export const publications: Publication[] = [
     "ACS Applied Materials & Interfaces",
     "10.1021/acsami.5b00448",
     "7(17), 8363–8376",
+    "/lab/6th.png",
   ),
   archivedPublication(
     2015,
@@ -508,6 +543,7 @@ export const publications: Publication[] = [
     "Chemical Physics Letters",
     "10.1016/j.cplett.2015.05.073",
     "630, 49–54",
+    "/lab/2015_2.png",
   ),
   archivedPublication(
     2014,
@@ -516,6 +552,7 @@ export const publications: Publication[] = [
     "Langmuir",
     "10.1021/la5010209",
     "30(29), 8631–8636",
+    "/lab/2014_1.png"
   ),
   archivedPublication(
     2013,
@@ -524,6 +561,7 @@ export const publications: Publication[] = [
     "Journal of Materials Chemistry B",
     "10.1039/c3tb00018d",
     "1(16), 2116–2127",
+    "/lab/2013_1.png"
   ),
   archivedPublication(
     2013,
@@ -532,6 +570,7 @@ export const publications: Publication[] = [
     "RSC Advances",
     "10.1039/c3ra42302f",
     "3, 15604–15607",
+    "/lab/2013_2.png"
   ),
   archivedPublication(
     2013,
@@ -540,6 +579,7 @@ export const publications: Publication[] = [
     "Nanotechnology",
     "10.1088/0957-4484/24/32/325103",
     "24(32), 325103",
+    "/lab/2013_3.png"
   ),
   archivedPublication(
     2012,
@@ -548,6 +588,7 @@ export const publications: Publication[] = [
     "Theranostics",
     "10.7150/thno.3912",
     "2(4), 295–301",
+    "/lab/2012_1.png"
   ),
   archivedPublication(
     2012,
@@ -556,22 +597,26 @@ export const publications: Publication[] = [
     "MRS Bulletin",
     "10.1557/mrs.2012.178",
     "37(12), 1283–1289",
+    "/lab/2012_2.png",
   ),
   archivedPublication(
-    2012,
+    2013,
     "Photoluminescence Properties of Graphene versus Other Carbon Nanomaterials",
     "Li Cao, Mohammed J. Meziani, **Sushant P. Sahu**, Ya-Ping Sun",
     "Accounts of Chemical Research",
     "10.1021/ar300128j",
     "46(1), 171–180",
+    "/lab/2013_4.png",
   ),
   archivedPublication(
-    2012,
+    2013,
     "Efficient Fluorescence Quenching in Carbon Dots by Surface-Doped Metals: Disruption of Excited State Redox Processes and Mechanistic Implications",
     "Juan Xu, **Sushant P. Sahu**, Li Cao, Christopher E. Bunker, Ge Peng, Yamin Liu, K. A. Shiral Fernando, Ping Wang, Elena A. Guliants, Mohammed J. Meziani, Haijun Qian, Ya-Ping Sun",
     "Langmuir",
     "10.1021/la302506e",
     "28(38), 134 ಆಡ",
+    "/lab/2013_5.png",
+
   ),
   archivedPublication(
     2011,
@@ -580,6 +625,7 @@ export const publications: Publication[] = [
     "Current Medicinal Chemistry",
     "10.2174/092986711795656225",
     "18(14), 2045–2059",
+    "/lab/2011_1.png",
   ),
   archivedPublication(
     2011,
@@ -588,6 +634,7 @@ export const publications: Publication[] = [
     "ChemPhysChem",
     "10.1002/cphc.201100640",
     "12(18), 3604–3608",
+    "/lab/2011_2.png",
   ),
   archivedPublication(
     2011,
@@ -596,6 +643,7 @@ export const publications: Publication[] = [
     "Journal of the American Chemical Society",
     "10.1021/ja200804h",
     "133(39), 15522–15529",
+    "/lab/2011_3.png",
   ),
   archivedPublication(
     2011,
@@ -604,6 +652,7 @@ export const publications: Publication[] = [
     "Nanoscale",
     "10.1039/c0nr00962h",
     "3(5), 2023–2027",
+    "/lab/2011_4.png",
   ),
   archivedPublication(
     2011,
@@ -612,6 +661,7 @@ export const publications: Publication[] = [
     "Experimental Biology and Medicine",
     "10.1258/ebm.2011.011132",
     "236(11), 1231–1238",
+    "/lab/2011_5.png",
   ),
   archivedPublication(
     2011,
@@ -620,6 +670,7 @@ export const publications: Publication[] = [
     "The Journal of Physical Chemistry C",
     "10.1021/jp202508r",
     "",
+    "/lab/2011_6.png",
   ),
   archivedPublication(
     2011,
@@ -628,6 +679,7 @@ export const publications: Publication[] = [
     "Canadian Journal of Chemistry",
     "10.1139/V10-096",
     "89(2), 104–112",
+    "/lab/2011_7.png",
   ),
   archivedPublication(
     2009,
@@ -636,6 +688,7 @@ export const publications: Publication[] = [
     "Journal of the American Chemical Society",
     "10.1021/ja907228q",
     "131(51), 18410–18414",
+    "/lab/2009_1.png",
   ),
 ];
 

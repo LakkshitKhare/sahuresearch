@@ -165,6 +165,25 @@ export function Publications() {
                               <span className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-400">
                                 {String(index + 1).padStart(2, "0")}
                               </span>
+                              {pub.tocGraphic ? (
+                                <a
+                                  href={pub.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block h-32 w-52 shrink-0 overflow-hidden rounded-md border border-line bg-white shadow-sm transition-transform duration-300 hover:scale-[1.02] sm:h-40 sm:w-64 lg:h-48 lg:w-[22rem]"
+                                >
+                                  <img
+                                    src={pub.tocGraphic}
+                                    alt={`${pub.title} graphical abstract`}
+                                    className="h-full w-full object-cover"
+                                    loading="lazy"
+                                  />
+                                </a>
+                              ) : (
+                                <div className="flex h-32 w-52 shrink-0 items-center justify-center rounded-md border border-dashed border-line bg-paper-50 text-[0.55rem] font-mono uppercase tracking-[0.2em] text-ink-300 sm:h-40 sm:w-64 lg:h-48 lg:w-[22rem]">
+                                  image
+                                </div>
+                              )}
                               <div className="flex-1">
                                 <h4 className="max-w-[32ch] text-[1.12rem] leading-[1.3] text-ink transition-all duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/list:text-ink-700 lg:text-[1.38rem]">
                                   <a
