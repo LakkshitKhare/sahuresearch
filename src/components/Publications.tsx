@@ -1,18 +1,8 @@
 import { useMemo, useState } from "react";
-import { type Publication, publications, profile } from "@/lib/content";
+import { publications, profile } from "@/lib/content";
 import { cn } from "@/utils/cn";
 import { Reveal, SectionHeader, SourceNote } from "./Primitives";
 import { ArrowUpRight, Search } from "./Icons";
-
-const FILTERS = [
-  { id: "all", label: "All" },
-  { id: "2025", label: "2025" },
-  { id: "2022", label: "2022" },
-  { id: "2021", label: "2021" },
-  { id: "earlier", label: "Earlier" },
-] as const;
-
-type FilterId = (typeof FILTERS)[number]["id"]; 
 
 function Authors({ value }: { value: string }) {
   const parts = value.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
@@ -31,51 +21,18 @@ function Authors({ value }: { value: string }) {
   );
 }
 
-function PublicationGraphic({ publication }: { publication: Publication }) {
-  const image = publication.tocGraphic?.trim();
-
-  if (image) {
-    return (
-      <div className="group/cover relative aspect-[4/3] overflow-hidden border border-line bg-paper-100 transition-[border-color,transform] duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] hover:border-ink/20">
-        <img
-          src={image}
-          alt={`${publication.title} publication graphic`}
-          loading="lazy"
-          className="h-full w-full object-contain transition-transform duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/cover:scale-[1.02]"
-        />
-      </div>
-    );
-  }
-
-  return (
-    <div className="grid-fine relative aspect-[4/3] overflow-hidden border border-line bg-paper-100 transition-[border-color,transform] duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] hover:border-ink/20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(36,71,232,0.06),transparent_55%)]" />
-      <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
-        <span className="label text-ink-400">TOC Graphic</span>
-        <span className="mt-3 font-display text-[1.2rem] leading-none tracking-[-0.04em] text-ink-500">
-          Coming soon
-        </span>
-      </div>
-    </div>
-  );
-}
-
 export function Publications() {
-  const [filter, setFilter] = useState<FilterId>("all");
+  const [filter, setFilter] = useState(String(Math.max(...publications.map((pub) => pub.year))));
   const [query, setQuery] = useState("");
 
   const filters = useMemo(() => {
     const years = Array.from(new Set(publications.map((pub) => pub.year))).sort((a, b) => b - a);
-    const yearOptions = years.filter((year) => year >= 2020).map((year) => ({
+    const yearOptions = years.map((year) => ({
       id: String(year),
       label: String(year),
     }));
 
-    return [
-      { id: "all", label: "All" },
-      ...yearOptions,
-      { id: "earlier", label: "Earlier" },
-    ] as const;
+    return yearOptions;
   }, []);
 
   type DynamicFilterId = (typeof filters)[number]["id"];
@@ -83,9 +40,7 @@ export function Publications() {
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return publications.filter((pub) => {
-      const matchesFilter =
-        filter === "all" ||
-        (filter === "earlier" ? pub.year < 2020 : String(pub.year) === filter);
+      const matchesFilter = String(pub.year) === filter;
       if (!matchesFilter) return false;
       if (!q) return true;
 
@@ -118,7 +73,7 @@ export function Publications() {
           index="04"
           eyebrow="Publications"
           title="Publications"
-          lead="Selected research publications spanning electrochemistry, nanotechnology, environmental technologies, sensors and optical bioimaging."
+          lead="A complete bibliography spanning electrochemistry, nanotechnology, environmental technologies, sensors and optical bioimaging."
           aside={
             <a
               href={profile.scholar}
@@ -143,7 +98,7 @@ export function Publications() {
                 <button
                   key={f.id}
                   type="button"
-                  onClick={() => setFilter(f.id as DynamicFilterId)}
+                  onClick={() => setFilter(f.id)}
                   aria-pressed={filter === f.id}
                   className={cn(
                     "min-h-11 px-3.5 text-[0.8125rem] font-medium transition-all duration-300 ease-[cubic-bezier(.16,1,.3,1)]",
@@ -204,11 +159,7 @@ export function Publications() {
                   {items.map((pub, index) => (
                     <li key={`${pub.doi}-${index}`} className="group/list">
                       <Reveal delay={60 + index * 60} className="border-b border-line-soft py-6 transition-[background-color] duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] hover:bg-paper-100/70">
-                        <article className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.55fr)] lg:gap-8">
-                          <div className="lg:pr-2">
-                            <PublicationGraphic publication={pub} />
-                          </div>
-
+                        <article>
                           <div className="flex flex-col justify-center">
                             <div className="flex items-start gap-4">
                               <span className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-400">
@@ -272,8 +223,8 @@ export function Publications() {
 
         <Reveal delay={100}>
           <SourceNote className="mt-10 border-t border-line pt-8">
-            A selection of publications is listed above. For the complete and most current publication record,
-            including citation metrics, please refer to the{" "}
+            Publication records are linked to their publisher or DOI pages. For citation metrics and any newer
+            additions, see the{" "}
             <a
               href={profile.scholar}
               target="_blank"
