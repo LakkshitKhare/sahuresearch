@@ -106,7 +106,16 @@ function ResearchPanel({ area, position }: { area: ResearchArea; position: numbe
             </div>
             <div className="overflow-hidden p-6 lg:p-8">
               <div className="transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.02]">
-                <ResearchFigure kind={area.figure as FigureKind} />
+                {area.id === "optical-bioimaging" ? (
+                  <img
+                    src="/website-assets/photo4.png"
+                    alt="SERS optical probe on a graphene-coated nanopillar substrate with its Raman spectrum"
+                    className="h-auto w-full"
+                    loading="lazy"
+                  />
+                ) : (
+                  <ResearchFigure kind={area.figure as FigureKind} />
+                )}
               </div>
             </div>
             <figcaption className="border-t border-line px-5 py-3 text-[0.75rem] leading-relaxed text-ink-400">
@@ -127,8 +136,25 @@ export function Research() {
           index="02"
           eyebrow="Research"
           title="Research Directions & Interests"
-          lead="The laboratory's programme is organised around four interconnected directions, unified by a common interest in molecular systems at electrified and nanoscale interfaces — from catalytic bond formation to optical probes inside living tissue."
+          lead="Research at the interface of electrochemistry, catalysis, nanotechnology and bioimaging."
         />
+
+        <Reveal className="mt-10">
+          <div className="overflow-hidden border border-line bg-white">
+            <img
+              src="/website-assets/research-overview.jpg"
+              alt="Research overview diagram showing the laboratory's core research themes across electrochemistry, nanotechnology, materials, sensors, and bioimaging"
+              className="h-auto w-full object-contain"
+            />
+          </div>
+        </Reveal>
+
+        <div className="mt-8 border-t border-line pt-6">
+          <p className="max-w-[70ch] text-[0.9375rem] leading-relaxed text-ink-500">
+            Design of Nanoscale materials — Morphology controlled synthesis of catalysts, metal nanoparticles,
+            plasmonic structures and ionic polymers — form the material basis in the laboratory.
+          </p>
+        </div>
 
         <div className="mt-10">
           {researchAreas.map((area, i) => (
@@ -136,27 +162,6 @@ export function Research() {
           ))}
         </div>
 
-        <div className="mt-8 border-t border-line pt-10">
-          <Reveal>
-            <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-              <p className="text-[0.9375rem] leading-relaxed text-ink-500">
-                These directions are connected by shared instrumentation, materials chemistry and analytical methods.
-              </p>
-              <span className="font-mono text-[0.625rem] uppercase tracking-[0.18em] text-electric">
-                Scientific network
-              </span>
-            </div>
-          </Reveal>
-        </div>
-
-        <div className="border-t border-line pt-10">
-          <Reveal>
-            <p className="text-[0.9375rem] leading-relaxed text-ink-500">
-              These directions are connected by shared instrumentation, shared materials chemistry and shared
-              analytical methods. The diagram below maps how the laboratory's themes relate to one another.
-            </p>
-          </Reveal>
-        </div>
       </div>
     </section>
   );

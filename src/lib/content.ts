@@ -156,9 +156,9 @@ export const researchAreas: ResearchArea[] = [
     label: "Optical bioimaging",
     title: "Optical Bioimaging Methods Using Nanoscale Optical Probes as Sensors",
     short:
-      "Scattering spectroscopy and nanoscale optical techniques — SHG, Raman scattering, SERS and super-resolution fluorescence microscopy — applied to cells and tissue.",
+      "We are interested in multiphoton Second Harmonic Generation (SHG), Surface Enhanced Raman Scattering (SERS)-based sensors, and super-resolution fluorescence microscopy to study cell membrane-molecule interactions as well as plasmonic nanomaterials.",
     description:
-      "The research explores scattering spectroscopy and nanoscale optical techniques, including multiphoton second harmonic generation (SHG), Raman scattering, surface-enhanced Raman spectroscopy (SERS) and super-resolution fluorescence microscopy. Objectives include understanding cell membrane–molecule interactions and cellular processes at the nanoscale, using plasmonic nanomaterials and tissue specimens, to image and understand these systems with unprecedented detail.",
+      "This research aims to understand cellular processes at a nanoscale and to understand complex stem cell differentiation processes, and image tissue specimens with an unprecedented level of detail.",
     applications: [
       "Cell membrane–molecule interactions",
       "Nanoscale cellular processes",

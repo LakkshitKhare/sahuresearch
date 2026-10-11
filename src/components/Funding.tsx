@@ -48,6 +48,32 @@ export function Funding() {
         </Reveal>
 
         <Reveal delay={140}>
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            <div className="border border-line bg-white p-5">
+              <img
+                src="/website-assets/kiit-logo.png"
+                alt="KIIT logo"
+                className="h-28 w-full object-contain"
+              />
+            </div>
+            <div className="border border-line bg-white p-5">
+              <img
+                src="/website-assets/recognition-photo.jpg"
+                alt="Recognition photograph associated with the laboratory's research funding or award event"
+                className="h-28 w-full object-cover"
+              />
+            </div>
+            <div className="border border-line bg-white p-5">
+              <img
+                src="/website-assets/serb-logo.png"
+                alt="DST-SERB logo and acknowledgement"
+                className="h-28 w-full object-contain"
+              />
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={140}>
           <SourceNote className="mt-10 max-w-[70ch]">
             Funding details, supported project titles and grant administration information will be published here
             as they become available.

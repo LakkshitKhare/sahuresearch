@@ -6,6 +6,8 @@ import { Ecosystem } from "@/components/Ecosystem";
 import { ResearchHighlights } from "@/components/ResearchHighlights";
 import { Publications } from "@/components/Publications";
 import { Facilities } from "@/components/Facilities";
+import { News } from "@/components/News";
+import { Gallery } from "@/components/Gallery";
 import { Funding } from "@/components/Funding";
 import { Opportunities } from "@/components/Opportunities";
 import { JoinUs } from "@/components/JoinUs";
@@ -30,6 +32,8 @@ export default function App() {
         <AcademicProfile />
         <Publications />
         <Facilities />
+        <News />
+        <Gallery />
         <Funding />
         <Opportunities />
         <JoinUs />

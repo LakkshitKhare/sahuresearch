@@ -18,12 +18,21 @@ export const NAV_LINKS = [
   { id: "projects", label: "Projects" },
   { id: "publications", label: "Publications" },
   { id: "facilities", label: "Facilities" },
+  { id: "news", label: "News" },
+  { id: "gallery", label: "Gallery" },
+  { id: "funding", label: "Funding" },
   { id: "academic-profile", label: "Academic Profile" },
   { id: "join-us", label: "Join Us" },
   { id: "contact", label: "Contact" },
 ];
 
 const NAV_IDS = NAV_LINKS.map((l) => l.id);
+const PRIMARY_LINKS = NAV_LINKS.filter(({ id }) =>
+  ["home", "about", "research", "projects", "publications"].includes(id),
+);
+const MORE_LINKS = NAV_LINKS.filter(({ id }) =>
+  ["facilities", "news", "gallery", "funding", "academic-profile", "join-us"].includes(id),
+);
 
 function Monogram() {
   const { photos } = usePhotos();
@@ -54,8 +63,10 @@ export function Navbar() {
   const observedActive = useActiveSection(NAV_IDS);
   const [manualActive, setManualActive] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const condensed = scrollY > 48;
   const active = manualActive ?? observedActive;
+  const moreActive = MORE_LINKS.some((link) => link.id === active);
 
   useEffect(() => {
     if (!manualActive) return;
@@ -65,6 +76,7 @@ export function Navbar() {
 
   useBodyScrollLock(open);
   useEscape(open, () => setOpen(false));
+  useEscape(moreOpen, () => setMoreOpen(false));
 
   useEffect(() => {
     if (!open) return;
@@ -78,6 +90,7 @@ export function Navbar() {
   const go = (id: string) => {
     setManualActive(id);
     setOpen(false);
+    setMoreOpen(false);
     requestAnimationFrame(() => scrollToSection(id));
   };
 
@@ -95,7 +108,7 @@ export function Navbar() {
             : "border-b border-transparent bg-transparent",
         )}
       >
-        <div className="shell flex h-[4.5rem] items-center justify-between gap-6">
+        <div className="shell flex h-[4.5rem] items-center justify-between gap-4">
           {/* Identity */}
           <a
             href="#home"
@@ -118,8 +131,8 @@ export function Navbar() {
 
           {/* Desktop navigation */}
           <nav aria-label="Primary" className="hidden lg:block">
-            <ul className="flex items-center gap-1">
-              {NAV_LINKS.map((link) => {
+            <ul className="flex items-center gap-0.5">
+              {PRIMARY_LINKS.map((link) => {
                 const isActive = active === link.id;
                 return (
                   <li key={link.id}>
@@ -131,7 +144,7 @@ export function Navbar() {
                       }}
                       aria-current={isActive ? "true" : undefined}
                       className={cn(
-                        "relative flex min-h-11 items-center px-3 text-[0.8125rem] font-medium transition-colors duration-300",
+                        "relative flex min-h-11 items-center px-2 text-[0.75rem] font-medium transition-colors duration-300 xl:px-2.5 xl:text-[0.8125rem]",
                         isActive ? "text-white" : "text-white/55 hover:text-white",
                       )}
                     >
@@ -139,7 +152,7 @@ export function Navbar() {
                       <span
                         aria-hidden="true"
                         className={cn(
-                          "absolute inset-x-3 bottom-3 h-px origin-left bg-electric transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)]",
+                          "absolute inset-x-2 bottom-3 h-px origin-left bg-electric transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] xl:inset-x-2.5",
                           isActive ? "scale-x-100" : "scale-x-0",
                         )}
                       />
@@ -147,6 +160,46 @@ export function Navbar() {
                   </li>
                 );
               })}
+              <li className="relative">
+                <button
+                  type="button"
+                  aria-expanded={moreOpen}
+                  aria-haspopup="true"
+                  onClick={() => setMoreOpen((current) => !current)}
+                  className={cn(
+                    "flex min-h-11 items-center gap-1 px-2 text-[0.75rem] font-medium transition-colors duration-300 xl:px-2.5 xl:text-[0.8125rem]",
+                    moreActive || moreOpen ? "text-white" : "text-white/55 hover:text-white",
+                  )}
+                >
+                  More
+                  <span aria-hidden="true" className="text-[0.625rem]">⌄</span>
+                </button>
+                {moreOpen ? (
+                  <ul className="absolute right-0 top-full z-10 min-w-52 border border-white/12 bg-ink/95 p-1 shadow-xl backdrop-blur-md">
+                    {MORE_LINKS.map((link) => {
+                      const isActive = active === link.id;
+                      return (
+                        <li key={link.id}>
+                          <a
+                            href={`#${link.id}`}
+                            onClick={(event) => {
+                              event.preventDefault();
+                              go(link.id);
+                            }}
+                            aria-current={isActive ? "true" : undefined}
+                            className={cn(
+                              "flex min-h-11 items-center px-3 text-[0.8125rem] transition-colors duration-200",
+                              isActive ? "bg-white/[0.08] text-white" : "text-white/65 hover:bg-white/[0.06] hover:text-white",
+                            )}
+                          >
+                            {link.label}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ) : null}
+              </li>
             </ul>
           </nav>
 
@@ -157,7 +210,7 @@ export function Navbar() {
                 e.preventDefault();
                 go("contact");
               }}
-              className="btn btn-ghost-light hidden h-11 min-h-11 px-4 text-[0.8125rem] sm:inline-flex"
+              className="btn btn-ghost-light hidden h-11 min-h-11 px-3 text-[0.75rem] lg:inline-flex xl:px-4 xl:text-[0.8125rem]"
             >
               Collaborate
               <ArrowUpRight size={15} />

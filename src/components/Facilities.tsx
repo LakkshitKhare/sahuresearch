@@ -62,6 +62,17 @@ function Lightbox({
   );
 }
 
+const externalLinks = [
+  {
+    name: "Central Research Facility (CRF)",
+    href: "https://crf.kiit.ac.in/",
+  },
+  {
+    name: "KIIT Incubator — Lab Facilities",
+    href: "https://kiitincubator.in/lab-facilities/",
+  },
+];
+
 export function Facilities() {
   const [activeId, setActiveId] = useState(facilities[0].id);
   const [lightbox, setLightbox] = useState(false);
@@ -190,6 +201,25 @@ export function Facilities() {
               </div>
             </div>
           </Reveal>
+        </div>
+
+        <div className="mt-16 border-t border-white/12 pt-10">
+          <p className="label text-white/40">Facility links</p>
+          <ul className="mt-5 flex flex-col gap-3 md:flex-row md:flex-wrap">
+            {externalLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 border border-white/15 bg-white/[0.03] px-4 py-2 text-[0.8125rem] font-medium text-white transition-colors duration-300 hover:border-electric/70 hover:text-electric"
+                >
+                  {link.name}
+                  <ArrowUpRight size={14} />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* ---- Field context ---- */}
