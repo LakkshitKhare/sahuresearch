@@ -33,8 +33,8 @@ export const bio = {
     "Research at the interface of electrochemistry, nanotechnology and bioimaging — developing electrified molecular systems, sensors and membranes for energy, environment and health.",
   paragraphs: [
     "Dr. Sushant Prabhakar Sahu is Assistant Professor and Ramanujan Faculty Fellow at the Centre of Innovation and Research, Kalinga Institute of Industrial Technology (KIIT) Deemed to be University, Bhubaneswar, Odisha.",
-    "His research programme is interdisciplinary, spanning electrocatalysis and electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes. The work addresses two connected challenges: the efficient and selective conversion of small molecules — including water splitting for hydrogen and the reduction of CO₂ — and the sensitive detection, separation and removal of contaminants such as PFAS compounds and heavy metals from water.",
-    "His peer-reviewed work has appeared in journals including Environmental Science & Technology Letters, ACS Omega, ACS ES&T Engineering and Energy & Fuels. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research on electrochemical sensing and photocatalysis at Louisiana State University, Baton Rouge.",
+    "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules — including water splitting for hydrogen & oxygen, the reduction of CO₂, C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
+    "His peer-reviewed work has appeared in top Q1 journals including JACS, Environmental Science & Technology, ACS Omega, J. Phys. Chem C, ACS ES&T Engineering and Energy & Fuels, etc. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research on electrochemical sensing, optical microscopy and photocatalysis at Louisiana State University and Clemson University, USA.",
   ],
   facts: [
     { term: "Academic position", value: "Assistant Professor and Ramanujan Faculty Fellow" },
@@ -96,7 +96,7 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrified molecular systems",
     title: "Electrified Molecular Systems for Sustainable Catalysis and Chemical Fuels",
     short:
-      "Scalable catalytic materials and tailored electrode surfaces that promote catalysis — including water splitting and CO₂ conversion — through the breaking and making of chemical bonds.",
+      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H₂. We are also interested in CO₂ electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
     description:
       "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO₂ conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H₂ more efficiently, with high selectivity and rapid rates of production.",
     applications: [
@@ -115,7 +115,7 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrochemical sensors",
     title: "Design of Electrochemical Sensors for Healthcare and Environmental Technologies",
     short:
-      "Engineering electrode surfaces to create highly sensitive electrochemical sensors for detecting small molecules such as PFAS compounds through redox processes.",
+      "Engineering electrode surfaces to create highly sensitive electrochemical sensors for detecting small molecules like PFAS compounds, molecularly imprinted polymers, spectro-electrochemical sensors, developing potentiometric sensors, and designing biosensors for disease-specific biomarkers through novel biochemical assays, monitoring antibody-antigen interactions",
     description:
       "Electrode surfaces are engineered to create highly sensitive electrochemical sensors for detecting small molecules such as PFAS compounds through redox processes. The programme also covers potentiometric sensors, ion-selective electrodes and biosensors, including specific biomarker detection, biochemical assays and antibody–antigen interactions.",
     applications: [
@@ -136,7 +136,7 @@ export const researchAreas: ResearchArea[] = [
     title:
       "Ionic Polymers / Polymer Membranes in Water Treatment Technologies and Electrochemical Processes",
     short:
-      "Polymerisation techniques — radical and interfacial polymerisation — used to prepare ionic polymer membranes and polymer gels for contaminant removal and electrochemical separation.",
+      "We utilize simple polymerization techniques like radical polymerization, chemical oxidative polymerization to prepare ionic conductive polymer membranes and polymer gels. These membranes are designed for effective removal of water contaminants and to facilitate advanced electrochemical separations.",
     description:
       "The research utilises polymerisation techniques, including radical polymerisation and interfacial polymerisation, to prepare ionic polymer membranes and polymer gels. These materials are designed for the effective removal of water contaminants, the removal and recovery of precious metals, the removal of toxic heavy metals, and advanced electrochemical separations and electrocatalytic processes.",
     applications: [
@@ -156,7 +156,7 @@ export const researchAreas: ResearchArea[] = [
     label: "Optical bioimaging",
     title: "Optical Bioimaging Methods Using Nanoscale Optical Probes as Sensors",
     short:
-      "We are interested in multiphoton Second Harmonic Generation (SHG), Surface Enhanced Raman Scattering (SERS)-based sensors, and super-resolution fluorescence microscopy to study cell membrane-molecule interactions as well as plasmonic nanomaterials.",
+      "We are interested in multiphoton Second Harmonic Generation (SHG), Surface Enhanced Raman Scattering (SERS)-based sensors, and super-resolution fluorescence microscopy to study cell membrane-molecule interactions as well as plasmonic nanomaterials. This research aims to understand cellular processes at a nanoscale and to understand complex stem cell differentiation processes, and image tissue specimens with an unprecedented level of detail.",
     description:
       "This research aims to understand cellular processes at a nanoscale and to understand complex stem cell differentiation processes, and image tissue specimens with an unprecedented level of detail.",
     applications: [
@@ -188,7 +188,7 @@ export const ecosystem: EcosystemNode[] = [
     id: "nanotech",
     label: "Nanotechnology",
     description:
-      "Nanoscale materials — metal nanoparticles, plasmonic structures and ionic polymers — form the material basis of every programme in the laboratory.",
+      "Design of Nanoscale materials — Morphology controlled synthesis of catalysts, metal nanoparticles, plasmonic structures and ionic polymers — form the material basis in the laboratory.",
     technologies: ["Ru nanoparticles", "Plasmonic nanomaterials", "Nanoscale optical probes", "Polymer gels"],
   },
   {

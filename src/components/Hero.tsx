@@ -105,7 +105,7 @@ export function Hero() {
             </div>
 
             <p className="hero-fade mt-8 max-w-[38rem] text-[1.0625rem] leading-[1.75] text-white/70 [--d:600ms] lg:text-[1.1875rem]">
-              {bio.lead}
+              Research at the interface of electrochemistry, nanotechnology, catalysis and bioimaging/biosensors — developing electrified and light-activated molecular systems, sensors and membranes for energy, environment and healthcare technologies.
             </p>
 
             <div className="hero-fade mt-10 flex flex-wrap items-center gap-3 [--d:700ms]">
