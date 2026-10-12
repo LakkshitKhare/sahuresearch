@@ -1,6 +1,6 @@
-/**
+﻿/**
  * ============================================================
- *  SITE CONTENT — SINGLE SOURCE OF TRUTH
+ *  SITE CONTENT â€” SINGLE SOURCE OF TRUTH
  * ============================================================
  *  Every fact on this website originates from this file.
  *  Nothing here is inferred beyond the professor's public
@@ -30,10 +30,10 @@ export const profile = {
 
 export const bio = {
   lead:
-    "Research at the interface of electrochemistry, nanotechnology and bioimaging — developing electrified molecular systems, sensors and membranes for energy, environment and health.",
+    "Research at the interface of electrochemistry, nanotechnology and bioimaging â€” developing electrified molecular systems, sensors and membranes for energy, environment and health.",
   paragraphs: [
     "Dr. Sushant Prabhakar Sahu is Assistant Professor and Ramanujan Faculty Fellow at the Centre of Innovation and Research, Kalinga Institute of Industrial Technology (KIIT) Deemed to be University, Bhubaneswar, Odisha.",
-    "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules — including water splitting for hydrogen & oxygen, the reduction of CO₂, C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
+    "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules â€” including water splitting for hydrogen & oxygen, the reduction of COâ‚‚, C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
     "His peer-reviewed work has appeared in top Q1 journals including JACS, Environmental Science & Technology, ACS Omega, J. Phys. Chem C, ACS ES&T Engineering and Energy & Fuels, etc. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research Electrochemical sensing and photocatalysis at Louisiana State University, Baton Rouge",
   ],
   facts: [
@@ -96,16 +96,16 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrified molecular systems",
     title: "Electrified Molecular Systems for Sustainable Catalysis and Chemical Fuels",
     short:
-      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H₂. We are also interested in CO₂ electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
+      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like Hâ‚‚. We are also interested in COâ‚‚ electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
     description:
-      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO₂ conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H₂ more efficiently, with high selectivity and rapid rates of production.",
+      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and COâ‚‚ conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as Hâ‚‚ more efficiently, with high selectivity and rapid rates of production.",
     applications: [
       "Industrial-scale water electrolysers",
       "Fuel cell technologies",
-      "CO₂ conversion to chemical fuels",
-      "High-selectivity H₂ production",
+      "COâ‚‚ conversion to chemical fuels",
+      "High-selectivity Hâ‚‚ production",
     ],
-    keywords: ["Electrocatalysis", "Water splitting", "CO₂ reduction", "HER", "Electrolyser"],
+    keywords: ["Electrocatalysis", "Water splitting", "COâ‚‚ reduction", "HER", "Electrolyser"],
     figure: "electrolyser",
     align: "left",
   },
@@ -117,13 +117,13 @@ export const researchAreas: ResearchArea[] = [
     short:
       "Engineering electrode surfaces to create highly sensitive electrochemical sensors for detecting small molecules like PFAS compounds, molecularly imprinted polymers, spectro-electrochemical sensors, developing potentiometric sensors, and designing biosensors for disease-specific biomarkers through novel biochemical assays, monitoring antibody-antigen interactions",
     description:
-      "Electrode surfaces are engineered to create highly sensitive electrochemical sensors for detecting small molecules such as PFAS compounds through redox processes. The programme also covers potentiometric sensors, ion-selective electrodes and biosensors, including specific biomarker detection, biochemical assays and antibody–antigen interactions.",
+      "Electrode surfaces are engineered to create highly sensitive electrochemical sensors for detecting small molecules such as PFAS compounds through redox processes. The programme also covers potentiometric sensors, ion-selective electrodes and biosensors, including specific biomarker detection, biochemical assays and antibodyâ€“antigen interactions.",
     applications: [
       "PFAS compound detection",
       "Potentiometric sensors",
       "Ion-selective electrodes",
       "Biomarker detection and biosensors",
-      "Antibody–antigen interaction assays",
+      "Antibodyâ€“antigen interaction assays",
     ],
     keywords: ["Biosensors", "Redox sensing", "Ion-selective electrodes", "PFAS", "Point-of-care"],
     figure: "sensor",
@@ -160,7 +160,7 @@ export const researchAreas: ResearchArea[] = [
     description:
       "This research aims to understand cellular processes at a nanoscale and to understand complex stem cell differentiation processes, and image tissue specimens with an unprecedented level of detail.",
     applications: [
-      "Cell membrane–molecule interactions",
+      "Cell membraneâ€“molecule interactions",
       "Nanoscale cellular processes",
       "Plasmonic nanomaterials",
       "Tissue specimen imaging",
@@ -188,7 +188,7 @@ export const ecosystem: EcosystemNode[] = [
     id: "nanotech",
     label: "Nanotechnology",
     description:
-      "Design of Nanoscale materials — Morphology controlled synthesis of catalysts, metal nanoparticles, plasmonic structures and ionic polymers — form the material basis in the laboratory.",
+      "Design of Nanoscale materials â€” Morphology controlled synthesis of catalysts, metal nanoparticles, plasmonic structures and ionic polymers â€” form the material basis in the laboratory.",
     technologies: ["Ru nanoparticles", "Plasmonic nanomaterials", "Nanoscale optical probes", "Polymer gels"],
   },
   {
@@ -202,15 +202,15 @@ export const ecosystem: EcosystemNode[] = [
     id: "catalysis",
     label: "Catalysis",
     description:
-      "Scalable catalytic materials drive the breaking and making of chemical bonds — water splitting to H₂ and the conversion of CO₂.",
-    technologies: ["Water splitting", "CO₂ conversion", "Hydrogen evolution", "Electrolyser flow cells"],
+      "Scalable catalytic materials drive the breaking and making of chemical bonds â€” water splitting to Hâ‚‚ and the conversion of COâ‚‚.",
+    technologies: ["Water splitting", "COâ‚‚ conversion", "Hydrogen evolution", "Electrolyser flow cells"],
   },
   {
     id: "biosensors",
     label: "Biosensors",
     description:
-      "Sensitive electrochemical and optical transducers detect small molecules, biomarkers and antibody–antigen interactions in complex matrices.",
-    technologies: ["PFAS detection", "Ion-selective electrodes", "Biomarkers", "Antibody–antigen assays"],
+      "Sensitive electrochemical and optical transducers detect small molecules, biomarkers and antibodyâ€“antigen interactions in complex matrices.",
+    technologies: ["PFAS detection", "Ion-selective electrodes", "Biomarkers", "Antibodyâ€“antigen assays"],
   },
   {
     id: "water",
@@ -223,7 +223,7 @@ export const ecosystem: EcosystemNode[] = [
     id: "bioimaging",
     label: "Optical Bioimaging",
     description:
-      "Scattering spectroscopy and nanoscale optical probes resolve cell membrane–molecule interactions and cellular processes with unprecedented detail.",
+      "Scattering spectroscopy and nanoscale optical probes resolve cell membraneâ€“molecule interactions and cellular processes with unprecedented detail.",
     technologies: ["Multiphoton SHG", "Raman scattering", "SERS", "Super-resolution fluorescence"],
   },
 ];
@@ -295,7 +295,7 @@ export const publications: Publication[] = [
     authors:
       "Rahul Bhise, Riddhi Kadrekar, Priti Singh, Nagapradeep Nidamanuri, Priyamvada Arte, Pinku Nath, Yu Wang, Arif D. Sheikh, Mudit Dixit, **Sushant P. Sahu**",
     journal: "Energy & Fuels",
-    volume: "39(43), 20896–20907",
+    volume: "39(43), 20896â€“20907",
     doi: "10.1021/acs.energyfuels.5c02899",
     url: "https://doi.org/10.1021/acs.energyfuels.5c02899",
     tocGraphic: "/lab/1stpub.png",
@@ -307,7 +307,7 @@ export const publications: Publication[] = [
       "Rapid and Direct Perfluorooctanoic Acid Sensing with Selective Ionomer Coatings on Screen-Printed Electrodes under Environmentally Relevant Concentrations",
     authors: "**Sushant P. Sahu**, Subarna Kole, Christopher G. Arges, Manas Ranjan Gartia",
     journal: "ACS Omega",
-    volume: "7(6), 5001–5007",
+    volume: "7(6), 5001â€“5007",
     doi: "10.1021/acsomega.1c05847",
     url: "https://doi.org/10.1021/acsomega.1c05847",
     tocGraphic: "/lab/5thpub.png",
@@ -316,10 +316,10 @@ export const publications: Publication[] = [
   {
     year: 2020,
     title:
-      "Impacts of Reactor Configuration, Degradation Mechanisms, and Water Matrices on Perfluorocarboxylic Acid Treatment Efficiency by the UV/Bi₃O(OH)(PO₄)₂ Photocatalytic Process",
+      "Impacts of Reactor Configuration, Degradation Mechanisms, and Water Matrices on Perfluorocarboxylic Acid Treatment Efficiency by the UV/Biâ‚ƒO(OH)(POâ‚„)â‚‚ Photocatalytic Process",
     authors: "Mojtaba Qanbarzadeh, Dawei Wang, Mohamed Ateia, **Sushant P. Sahu**, Ezra L. Cates",
     journal: "ACS ES&T Engineering",
-    volume: "1(2), 239–248",
+    volume: "1(2), 239â€“248",
     doi: "10.1021/acsestengg.0c00086",
     url: "https://doi.org/10.1021/acsestengg.0c00086",
     tocGraphic: "/lab/impact.png",
@@ -331,7 +331,7 @@ export const publications: Publication[] = [
     authors:
       "Alisha Prasad, **Sushant P. Sahu**, Sara Karoline Figueiredo Stofela, Ardalan Chaichi, Syed Mohammad Abid Hasan, Wokil Bam, Kanchan Maiti, Kevin M. McPeak, Gang Logan Liu, Manas Ranjan Gartia",
     journal: "ACS Omega",
-    volume: "6(17), 11297–11306",
+    volume: "6(17), 11297â€“11306",
     doi: "10.1021/acsomega.1c00132",
     url: "https://doi.org/10.1021/acsomega.1c00132",
     tocGraphic: "/lab/slide12.png",
@@ -340,11 +340,11 @@ export const publications: Publication[] = [
   {
     year: 2018,
     title:
-      "Rapid Degradation and Mineralization of Perfluorooctanoic Acid by a New Petitjeanite Bi₃O(OH)(PO₄)₂ Microparticle Ultraviolet Photocatalyst",
+      "Rapid Degradation and Mineralization of Perfluorooctanoic Acid by a New Petitjeanite Biâ‚ƒO(OH)(POâ‚„)â‚‚ Microparticle Ultraviolet Photocatalyst",
     authors:
       "**Sushant P. Sahu**, Mojtaba Qanbarzadeh, Mohamed Ateia, Hamed Torkzadeh, Amith S. Maroli, Ezra L. Cates",
     journal: "Environmental Science & Technology Letters",
-    volume: "5(8), 533–538",
+    volume: "5(8), 533â€“538",
     doi: "10.1021/acs.estlett.8b00395",
     url: "https://doi.org/10.1021/acs.estlett.8b00395",
     tocGraphic: "/lab/slide23.png",
@@ -356,16 +356,16 @@ export const publications: Publication[] = [
     "Prakash Hamal, **Sushant P. Sahu**, Peter P. Piers, Huy Nguyen, Shashank S. Kamble, Robin L. McCarley, Manas R. Gartia, Louis H. Haber",
     "Biochemistry",
     "10.1021/acs.biochem.4c00302",
-    "64(7), 1476–1483",
+    "64(7), 1476â€“1483",
     "/lab/2ndpub.png",
   ),
   archivedPublication(
     2025,
-    "Guanine-Assisted Contrived Low Pt-Integrated Mo₂C/C for Hydrogen Evolution Reaction",
+    "Guanine-Assisted Contrived Low Pt-Integrated Moâ‚‚C/C for Hydrogen Evolution Reaction",
     "Tapan Ping, Smruti Vardhan Purohit, **Sushant P. Sahu**, Bibek Dash, Bikash Kumar Jena",
     "Langmuir",
     "10.1021/acs.langmuir.4c04383",
-    "41(5), 3392–3401",
+    "41(5), 3392â€“3401",
     "/lab/3rdpub.png",
   ),
   archivedPublication(
@@ -380,10 +380,10 @@ export const publications: Publication[] = [
   archivedPublication(
     2024,
     "Machine Learning for Automated Classification of Lung Collagen in a Urethane-Induced Lung Injury Mouse Model",
-    "Khalid Hamad Alnafisah, Amit Ranjan, **Sushant P. Sahu**, Jianhua Chen, Sarah Mohammad Alhejji, Alexandra Noël, Manas Ranjan Gartia, Supratik Mukhopadhyay",
+    "Khalid Hamad Alnafisah, Amit Ranjan, **Sushant P. Sahu**, Jianhua Chen, Sarah Mohammad Alhejji, Alexandra NoÃ«l, Manas Ranjan Gartia, Supratik Mukhopadhyay",
     "Biomedical Optics Express",
     "10.1364/BOE.527972",
-    "15(10), 5980–5995",
+    "15(10), 5980â€“5995",
     "/lab/2024_2.png",
   ),
   archivedPublication(
@@ -397,7 +397,7 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2023,
-    "Current Prospects of Carbon-Based Nanodots in Photocatalytic CO₂ Conversion",
+    "Current Prospects of Carbon-Based Nanodots in Photocatalytic COâ‚‚ Conversion",
     "**Sushant P. Sahu**, Christabel Adjah-Tetteh, Nagapradeep Nidamanuri, Sumit K. Sonkar, Erin U. Antia, Tam Tran, Guanguang Xia, Yudong Wang, Ryan Simon, Manas Ranjan Gartia, Supratik Mukhopadhyay, Yu Wang, Xiao-Dong Zhou",
     "Carbon Quantum Dots for Sustainable Energy and Optoelectronics",
     "10.1016/B978-0-323-90895-5.00020-5",
@@ -416,7 +416,7 @@ export const publications: Publication[] = [
   archivedPublication(
     2021,
     "Mmp12 Is Upregulated by in utero Second-Hand Smoke Exposures and Is a Key Factor Contributing to Aggravated Lung Responses in Adult Emphysema, Asthma, and Lung Cancer Mouse Models",
-    "Alexandra Noël, Zakia Perveen, Rui Xiao, Harriet Hammond, Viviana Le Donne, Kelsey Legendre, Manas Ranjan Gartia, **Sushant P. Sahu**, Daniel B. Paulsen, Arthur L. Penn",
+    "Alexandra NoÃ«l, Zakia Perveen, Rui Xiao, Harriet Hammond, Viviana Le Donne, Kelsey Legendre, Manas Ranjan Gartia, **Sushant P. Sahu**, Daniel B. Paulsen, Arthur L. Penn",
     "Frontiers in Physiology",
     "10.3389/fphys.2021.704401",
     "12, 704401",
@@ -428,7 +428,7 @@ export const publications: Publication[] = [
     "Yu Wang, **Sushant P. Sahu**, Alec J. Clay, Amanda J. Gildersleeve",
     "Chemical Communications",
     "10.1039/d1cc00682g",
-    "57(27), 3331–3334",
+    "57(27), 3331â€“3334",
     "/lab/2021_4.png",
   ),
   archivedPublication(
@@ -437,7 +437,7 @@ export const publications: Publication[] = [
     "Kerin M. Cahill, Manas R. Gartia, **Sushant P. Sahu**, Sarah R. Bergeron, Linda M. Heffernan, Daniel B. Paulsen, Arthur L. Penn",
     "Toxicological Research",
     "10.1007/s43188-021-00103-3",
-    "37(4), 497–508",
+    "37(4), 497â€“508",
     "/lab/2022_3.png",
   ),
   archivedPublication(
@@ -464,7 +464,7 @@ export const publications: Publication[] = [
     "**Sushant P. Sahu**, Qianglin Liu, Alisha Prasad, Syed Mohammad Abid Hasan, Qun Liu, Maria Ximena Bastidas Rodriguez, Orna Mukhopadhyay, David Burk, Joseph Francis, Supratik Mukhopadhyay, Xing Fu, Manas Ranjan Gartia",
     "Biomedical Optics Express",
     "10.1364/BOE.410347",
-    "11(11), 6429–6444",
+    "11(11), 6429â€“6444",
     "/lab/2021_7.png",
   ),
   archivedPublication(
@@ -473,7 +473,7 @@ export const publications: Publication[] = [
     "Nishir Mehta, **Sushant P. Sahu**, Shahensha Shaik, Ram Devireddy, Manas Ranjan Gartia",
     "Nanophotonics in Biomedical Engineering",
     "10.1007/978-981-15-6137-5_8",
-    "2020, 231–262",
+    "2020, 231â€“262",
     "/lab/2021_8.png",
 
   ),
@@ -488,7 +488,7 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2021,
-    "Comment on ‘Enhanced Photocatalytic Degradation of Perfluorooctanoic Acid Using Carbon-Modified Bismuth Phosphate Composite: Effectiveness, Material Synergy, and Roles of Carbon’",
+    "Comment on â€˜Enhanced Photocatalytic Degradation of Perfluorooctanoic Acid Using Carbon-Modified Bismuth Phosphate Composite: Effectiveness, Material Synergy, and Roles of Carbonâ€™",
     "Ezra L. Cates, Mojtaba Qanbarzadeh, **Sushant P. Sahu**",
     "Chemical Engineering Journal",
     "10.1016/j.cej.2020.127060",
@@ -501,7 +501,7 @@ export const publications: Publication[] = [
     "**Sushant P. Sahu**, Amirreza Mahigir, Benjamin Chidester, Georgios Veronis, Manas Ranjan Gartia",
     "Nano Letters",
     "10.1021/acs.nanolett.9b02239",
-    "19(9), 6192–6202",
+    "19(9), 6192â€“6202",
     "/lab/2019_1.png",
   ),
   archivedPublication(
@@ -519,7 +519,7 @@ export const publications: Publication[] = [
     "**Sushant P. Sahu**, Stephanie L. Cates, Hyoung-Il Kim, Jae-Hong Kim, Ezra L. Cates",
     "Environmental Science & Technology",
     "10.1021/acs.est.7b05941",
-    "52(5), 2973–2980",
+    "52(5), 2973â€“2980",
     "/lab/2018_2.png",
   ),
   archivedPublication(
@@ -528,7 +528,7 @@ export const publications: Publication[] = [
     "Ge Peng, **Sushant P. Sahu**, Mohammed J. Meziani, Li Cao, Yamin Liu, Ya-Ping Sun",
     "Nanomaterials Handbook",
     "10.1201/9781315371795-10",
-    "2017, 273–308",
+    "2017, 273â€“308",
     "/lab/2017_1.png",
 
   ),
@@ -538,7 +538,7 @@ export const publications: Publication[] = [
     "**Sushant P. Sahu**, Ezra L. Cates",
     "The Journal of Physical Chemistry C",
     "10.1021/acs.jpcc.7b00776",
-    "121(19), 10538–10545",
+    "121(19), 10538â€“10545",
     "/lab/2017_2.png",
   ),
   archivedPublication(
@@ -547,7 +547,7 @@ export const publications: Publication[] = [
     "Timothy A. Johnson, Elisa A. Rehak, **Sushant P. Sahu**, David A. Ladner, Ezra L. Cates",
     "Environmental Science & Technology",
     "10.1021/acs.est.6b04239",
-    "50(21), 11912–11921",
+    "50(21), 11912â€“11921",
     "/lab/2016_1.png",
   ),
   archivedPublication(
@@ -556,7 +556,7 @@ export const publications: Publication[] = [
     "K. A. Shiral Fernando, **Sushant P. Sahu**, Yamin Liu, William K. Lewis, Elena A. Guliants, Amirhossein Jafariyan, Ping Wang, Christopher E. Bunker, Ya-Ping Sun",
     "ACS Applied Materials & Interfaces",
     "10.1021/acsami.5b00448",
-    "7(17), 8363–8376",
+    "7(17), 8363â€“8376",
     "/lab/6th.png",
   ),
   archivedPublication(
@@ -565,7 +565,7 @@ export const publications: Publication[] = [
     "**Sushant P. Sahu**, Li Cao, Mohammed J. Meziani, Christopher E. Bunker, K. A. Shiral Fernando, Ping Wang, Ya-Ping Sun",
     "Chemical Physics Letters",
     "10.1016/j.cplett.2015.05.073",
-    "630, 49–54",
+    "630, 49â€“54",
     "/lab/2015_2.png",
   ),
   archivedPublication(
@@ -574,25 +574,25 @@ export const publications: Publication[] = [
     "**Sushant P. Sahu**, Yamin Liu, Ping Wang, Christopher E. Bunker, K. A. Shiral Fernando, William K. Lewis, Elena A. Guliants, Fan Yang, Jinping Wang, Ya-Ping Sun",
     "Langmuir",
     "10.1021/la5010209",
-    "30(29), 8631–8636",
+    "30(29), 8631â€“8636",
     "/lab/2014_1.png"
   ),
   archivedPublication(
     2013,
-    "Carbon ‘Quantum’ Dots for Optical Bioimaging",
+    "Carbon â€˜Quantumâ€™ Dots for Optical Bioimaging",
     "Pengju G. Luo, **Sushant P. Sahu**, Sheng-Tao Yang, Sumit K. Sonkar, Jinping Wang, Haifang Wang, Gregory E. LeCroy, Li Cao, Ya-Ping Sun",
     "Journal of Materials Chemistry B",
     "10.1039/c3tb00018d",
-    "1(16), 2116–2127",
+    "1(16), 2116â€“2127",
     "/lab/2013_1.png"
   ),
   archivedPublication(
     2013,
-    "Versatility with Carbon Dots – from Overcooked BBQ to Brightly Fluorescent Agents and Photocatalysts",
+    "Versatility with Carbon Dots â€“ from Overcooked BBQ to Brightly Fluorescent Agents and Photocatalysts",
     "Jinping Wang, **Sushant P. Sahu**, Sumit K. Sonkar, Kenneth N. Tackett II, Katherine W. Sun, Yamin Liu, Halidan Maimaiti, Parambath Anilkumar, Ya-Ping Sun",
     "RSC Advances",
     "10.1039/c3ra42302f",
-    "3, 15604–15607",
+    "3, 15604â€“15607",
     "/lab/2013_2.png"
   ),
   archivedPublication(
@@ -606,11 +606,11 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2012,
-    "Competitive Performance of Carbon ‘Quantum’ Dots in Optical Bioimaging",
+    "Competitive Performance of Carbon â€˜Quantumâ€™ Dots in Optical Bioimaging",
     "Li Cao, Sheng-Tao Yang, Xin Wang, Pengju G. Luo, Jia-Hui Liu, **Sushant P. Sahu**, Yamin Liu, Ya-Ping Sun",
     "Theranostics",
     "10.7150/thno.3912",
-    "2(4), 295–301",
+    "2(4), 295â€“301",
     "/lab/2012_1.png"
   ),
   archivedPublication(
@@ -619,7 +619,7 @@ export const publications: Publication[] = [
     "Li Cao, **Sushant P. Sahu**, Parambath Anilkumar, Chang Yi Kong, Ya-Ping Sun",
     "MRS Bulletin",
     "10.1557/mrs.2012.178",
-    "37(12), 1283–1289",
+    "37(12), 1283â€“1289",
     "/lab/2012_2.png",
   ),
   archivedPublication(
@@ -628,7 +628,7 @@ export const publications: Publication[] = [
     "Li Cao, Mohammed J. Meziani, **Sushant P. Sahu**, Ya-Ping Sun",
     "Accounts of Chemical Research",
     "10.1021/ar300128j",
-    "46(1), 171–180",
+    "46(1), 171â€“180",
     "/lab/2013_4.png",
   ),
   archivedPublication(
@@ -637,7 +637,7 @@ export const publications: Publication[] = [
     "Juan Xu, **Sushant P. Sahu**, Li Cao, Christopher E. Bunker, Ge Peng, Yamin Liu, K. A. Shiral Fernando, Ping Wang, Elena A. Guliants, Mohammed J. Meziani, Haijun Qian, Ya-Ping Sun",
     "Langmuir",
     "10.1021/la302506e",
-    "28(38), 134 ಆಡ",
+    "28(38), 134 à²†à²¡",
     "/lab/2013_5.png",
 
   ),
@@ -647,7 +647,7 @@ export const publications: Publication[] = [
     "Parambath Anilkumar, Fushen Lu, Li Cao, Pengju G. Luo, Jia-Hui Liu, **Sushant P. Sahu**, Kenneth N. Tackett II, Yu Wang, Ya-Ping Sun",
     "Current Medicinal Chemistry",
     "10.2174/092986711795656225",
-    "18(14), 2045–2059",
+    "18(14), 2045â€“2059",
     "/lab/2011_1.png",
   ),
   archivedPublication(
@@ -656,25 +656,25 @@ export const publications: Publication[] = [
     "Juan Xu, **Sushant P. Sahu**, Li Cao, Parambath Anilkumar, Kenneth N. Tackett II, Haijun Qian, Christopher E. Bunker, Elena A. Guliants, Alexander Parenzan, Ya-Ping Sun",
     "ChemPhysChem",
     "10.1002/cphc.201100640",
-    "12(18), 3604–3608",
+    "12(18), 3604â€“3608",
     "/lab/2011_2.png",
   ),
   archivedPublication(
     2011,
-    "Carbon Nanoparticles as Visible-Light Photocatalysts for Efficient CO₂ Conversion and Beyond",
+    "Carbon Nanoparticles as Visible-Light Photocatalysts for Efficient COâ‚‚ Conversion and Beyond",
     "Li Cao, **Sushant P. Sahu**, Parambath Anilkumar, Christopher E. Bunker, Juan Xu, K. A. Shiral Fernando, Ping Wang, Elena A. Guliants, Kenneth N. Tackett, Ya-Ping Sun",
     "Journal of the American Chemical Society",
     "10.1021/ja200804h",
-    "133(39), 15522–15529",
+    "133(39), 15522â€“15529",
     "/lab/2011_3.png",
   ),
   archivedPublication(
     2011,
-    "Toward Quantitatively Fluorescent Carbon-Based ‘Quantum’ Dots",
+    "Toward Quantitatively Fluorescent Carbon-Based â€˜Quantumâ€™ Dots",
     "Parambath Anilkumar, Xin Wang, Li Cao, **Sushant P. Sahu**, Jia-Hui Liu, Ping Wang, Katerina Korch, Kenneth N. Tackett II, Alexander Parenzan, Ya-Ping Sun",
     "Nanoscale",
     "10.1039/c0nr00962h",
-    "3(5), 2023–2027",
+    "3(5), 2023â€“2027",
     "/lab/2011_4.png",
   ),
   archivedPublication(
@@ -683,7 +683,7 @@ export const publications: Publication[] = [
     "Yanli Wang, Parambath Anilkumar, Li Cao, Jia-Hui Liu, Pengju G. Luo, Kenneth N. Tackett, **Sushant P. Sahu**, Ping Wang, Xin Wang, Ya-Ping Sun",
     "Experimental Biology and Medicine",
     "10.1258/ebm.2011.011132",
-    "236(11), 1231–1238",
+    "236(11), 1231â€“1238",
     "/lab/2011_5.png",
   ),
   archivedPublication(
@@ -697,11 +697,11 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2011,
-    "Reverse Stern–Volmer Behavior for Luminescence Quenching in Carbon Nanoparticles",
+    "Reverse Sternâ€“Volmer Behavior for Luminescence Quenching in Carbon Nanoparticles",
     "Li Cao, Parambath Anilkumar, Xin Wang, Jia-Hui Liu, **Sushant P. Sahu**, Mohammed J. Meziani, Ethan Myers, Ya-Ping Sun",
     "Canadian Journal of Chemistry",
     "10.1139/V10-096",
-    "89(2), 104–112",
+    "89(2), 104â€“112",
     "/lab/2011_7.png",
   ),
   archivedPublication(
@@ -710,7 +710,7 @@ export const publications: Publication[] = [
     "Jiangbo Yu, Changfeng Wu, **Sushant P. Sahu**, Lawrence P. Fernando, Craig Szymanski, Jason McNeill",
     "Journal of the American Chemical Society",
     "10.1021/ja907228q",
-    "131(51), 18410–18414",
+    "131(51), 18410â€“18414",
     "/lab/2009_1.png",
   ),
 ];
@@ -736,7 +736,9 @@ export type Facility = {
     | "vacuumoven"
     | "phmeter"
     | "furnace"
-    | "powersupply";
+    | "powersupply"
+    | "refrigerator"
+    | "probesonicator";
 };
 
 export const facilities: Facility[] = [
@@ -747,7 +749,7 @@ export const facilities: Facility[] = [
     vendor: "Admiral Instruments, USA",
     description:
       "A full electrochemical workstation for controlled-potential and controlled-current experiments, supporting voltammetry, impedance and long-duration electrolysis.",
-    application: "Electrocatalysis, water splitting, CO₂ reduction, sensor characterisation",
+    application: "Electrocatalysis, water splitting, COâ‚‚ reduction, sensor characterisation",
     figure: "potentiostat",
   },
   {
@@ -782,7 +784,7 @@ export const facilities: Facility[] = [
   },
   {
     id: "stirrer",
-    name: "05 Magnetic Stirrer with Hot Plate",
+    name: "05 Magnetic Stirrer",
     detail: "Heating and Mixing",
     vendor: "Laboratory Hot Plate Stirrer",
     description:
@@ -840,6 +842,25 @@ export const facilities: Facility[] = [
     application: "Electrodeposition, constant-current electrolysis",
     figure: "powersupply",
   },
+  {
+    id: "refrigerator",
+    name: "11 Refrigerator",
+    detail: "Cold Storage",
+    vendor: "Laboratory Refrigerator",
+    description:
+      "A laboratory refrigerator for storing samples, reagents and temperature-sensitive materials under controlled cold conditions.",
+    application: "Sample storage, reagent preservation, cold-chain material handling",
+    figure: "refrigerator",
+  },
+  {
+    id: "probesonicator",
+    name: "12 Probe Sonicator",
+    detail: "Sample Disintegration",
+    vendor: "Laboratory Probe Sonicator",
+    description: "",
+    application: "",
+    figure: "probesonicator",
+  },
 ];
 
 /* ============================================================
@@ -892,21 +913,21 @@ export const educationHistory = [
   {
     degree: "Ph.D. in Chemistry",
     institution: "Clemson University, Clemson, South Carolina",
-    year: "August 2007 – December 2014",
+    year: "August 2007 â€“ December 2014",
     detail: "GPA: 3.61 / 4.0",
     thesis: 'Thesis: "Development of Carbon Dots in Photocatalytic CO2 Conversion"',
   },
   {
     degree: "M.Sc. in Chemistry",
     institution: "Indian Institute of Technology (IIT), Guwahati, India",
-    year: "July 2004 – May 2006",
+    year: "July 2004 â€“ May 2006",
     detail: "GPA: 7.61 / 10.0",
     thesis: "",
   },
   {
     degree: "B.Sc. in Chemistry",
     institution: "University of Mumbai, Mumbai, India",
-    year: "July 2000 – May 2003",
+    year: "July 2000 â€“ May 2003",
     detail: "First Class, 75.75%",
     thesis: "",
   },
@@ -916,19 +937,19 @@ export const academicAppointments = [
   {
     title: "Assistant Professor and Ramanujan Faculty Fellow",
     org: "Centre for Innovation and Research\nKalinga Institute of Industrial Technology (KIIT) Deemed to be University",
-    period: "June 2026 – Present",
+    period: "June 2026 â€“ Present",
     isFeatured: true,
   },
   {
     title: "Assistant Professor and Ramanujan Faculty Fellow",
     org: "Amity University, Navi Mumbai, Maharashtra",
-    period: "May 2023 – May 2026",
+    period: "May 2023 â€“ May 2026",
     isFeatured: false,
   },
   {
     title: "Visiting Scholar",
     org: "Department of Chemistry and Institute of Materials Research and Innovation\nUniversity of Louisiana, Lafayette, Louisiana",
-    period: "February 2023 – April 2023",
+    period: "February 2023 â€“ April 2023",
     host: "Host: Dr. Yu Wang",
     research: "Research Area: Styrene-based Ionic Fluoropolymers in Selective Removal of Perfluoroalkyl Substances at Environmentally Relevant Concentrations",
     isFeatured: false,
@@ -936,7 +957,7 @@ export const academicAppointments = [
   {
     title: "Senior Project Associate",
     org: "CSIR-Institute of Minerals and Materials and Technology\nBhubaneswar, Odisha",
-    period: "September 2022 – January 2023",
+    period: "September 2022 â€“ January 2023",
     host: "Host: Dr. B.K. Jena",
     research: "Research Area: Catalyst Development for Electrolyzers",
     isFeatured: false,
@@ -944,7 +965,7 @@ export const academicAppointments = [
   {
     title: "Visiting Scholar and Chemistry Instructor",
     org: "Department of Chemistry and Institute of Materials Research and Innovation\nUniversity of Louisiana, Lafayette, Louisiana",
-    period: "August 2020 – August 2022",
+    period: "August 2020 â€“ August 2022",
     host: "Host: Dr. Yu Wang",
     research: "Research Area: Development of Anion Exchange Polymeric Materials for Water Treatment and Electrochemical Processes",
     isFeatured: false,
@@ -952,7 +973,7 @@ export const academicAppointments = [
   {
     title: "Postdoctoral Research Scholar",
     org: "Applied Nanophotonics Laboratory\nDepartment of Mechanical Engineering\nLouisiana State University, Baton Rouge, Louisiana",
-    period: "February 2018 – August 2020",
+    period: "February 2018 â€“ August 2020",
     host: "Advisor: Dr. Manas R. Gartia",
     research: "Research Area: Multiphoton Second Harmonic Generation Imaging and Development of Electrochemical Sensors",
     isFeatured: false,
@@ -960,7 +981,7 @@ export const academicAppointments = [
   {
     title: "Postdoctoral Fellow",
     org: "L.G. Rich Environmental Chemistry Laboratory\nDepartment of Environmental Engineering and Earth Sciences\nClemson University, South Carolina",
-    period: "May 2015 – February 2018",
+    period: "May 2015 â€“ February 2018",
     host: "Advisor: Dr. Ezra Cates",
     research: "Research Area: X-ray Driven Materials and Radiation-based Processes for Environmental Applications",
     isFeatured: false,
@@ -968,20 +989,20 @@ export const academicAppointments = [
 ];
 
 export const awardsTimeline = [
-  { year: "2025", title: "Best research paper presentation award in the Water domain at SANKET2025 — Sustainability through Ancient Knowledge & Emerging Technologies Conference, IIT Bombay." },
+  { year: "2025", title: "Best research paper presentation award in the Water domain at SANKET2025 â€” Sustainability through Ancient Knowledge & Emerging Technologies Conference, IIT Bombay." },
   { year: "2025", title: "Selected under the Young S&T Leaders category for participation in the Emerging Science, Technology, and Innovation Conclave (ESTIC-2025), New Delhi." },
-  { year: "2023–2028", title: "Selected for Ramanujan Fellowship with a total approved budget of Rs. 1,19,00,000 from DST-ANRF, India." },
-  { year: "2020–2021", title: "Guest Editor, Frontiers in Chemistry." },
-  { year: "2019", title: "National Postdoctoral Fellowship (NPDF) from DST-SERB, India — Declined." },
+  { year: "2023â€“2028", title: "Selected for Ramanujan Fellowship with a total approved budget of Rs. 1,19,00,000 from DST-ANRF, India." },
+  { year: "2020â€“2021", title: "Guest Editor, Frontiers in Chemistry." },
+  { year: "2019", title: "National Postdoctoral Fellowship (NPDF) from DST-SERB, India â€” Declined." },
   { year: "2019", title: "Selected for the 2019 ACS Postdoc to Faculty (ACS P2F) Workshop; total award value $810, sponsored by the American Chemical Society." },
-  { year: "2018–2020", title: "Postdoctoral Fellowship from Louisiana State University." },
-  { year: "2015–2018", title: "Postdoctoral Fellowship from Clemson University." },
+  { year: "2018â€“2020", title: "Postdoctoral Fellowship from Louisiana State University." },
+  { year: "2015â€“2018", title: "Postdoctoral Fellowship from Clemson University." },
   { year: "2016", title: "Postdoctoral Travel Grant ($250) from Clemson University Postdoctoral Association for oral presentation at the 251st ACS National Meeting, San Diego, California, USA." },
   { year: "2014", title: "Professional Enrichment Grant ($750 Spring + $750 Summer), Clemson University Graduate School." },
   { year: "2013", title: "Professional Enrichment Grant ($400), Clemson University Chemistry Department, for SPASEC-18 Conference presentation." },
   { year: "2012", title: "Fellowship covering all expenses for I-CAMP 2012 summer school on Renewable and Sustainable Energy at University of Colorado, Boulder." },
   { year: "2009", title: "Among the top 50 students selected with travel support for Nanobiophotonics Summer School at the University of Illinois at Urbana-Champaign." },
-  { year: "2004–2006", title: "Merit-cum-Means Scholarship covering full tuition fees at IIT Guwahati." },
+  { year: "2004â€“2006", title: "Merit-cum-Means Scholarship covering full tuition fees at IIT Guwahati." },
   { year: "2004", title: "Selected for the All India Level Joint Admission Test for M.Sc. (JAM-2004)." },
   { year: "2004", title: "Sir Ratan Tata and JRD Tata Scholarship for excellence in B.Sc." },
   { year: "2003", title: "Award Winner at D.G. Ruparel College, University of Mumbai, for First Class with Distinction in B.Sc. (Hons.)." },
@@ -1042,7 +1063,7 @@ export const conferencePresentations = [
   { year: 2019, title: "Characterizing Differentiation Potential of Adipose-derived Stem Cells using Gold Nanorods by Dark-Field Hyperspectral Scattering Microscopy", authors: "Sahu, S. P.; Mehta, N.; Shaik, S.; Devireddy, R.; Gartia, M. R.", venue: "257th American Chemical Society National Meeting", location: "Orlando, FL, USA", format: "Oral Presentation", link: "" },
   { year: 2019, title: "Development of Electrochemical Sensor for Phosphate Ion Determination in Environmental Water", authors: "Sahu, S. P.; Prasad, A.; Gartia, M. R.", venue: "257th American Chemical Society National Meeting", location: "Orlando, FL, USA", format: "Oral Presentation", link: "" },
   { year: 2019, title: "Orientation Imaging of Single Molecules on Plasmonic Nanohole Arrays by Second Harmonic Generation Microscopy", authors: "Sahu, S. P.; Mahigir, A.; Chidester, B.; Veronis, G.; Gartia, M. R.", venue: "257th American Chemical Society National Meeting", location: "Orlando, FL, USA", format: "Oral Presentation", link: "" },
-  { year: 2019, title: "Dark-Field Hyperspectral Imaging of Single Plasmonic Gold Nanorods and Their Scattering Characteristics in Complex Biological Environments", authors: "Mehta, N.†; Sahu, S.†; Shaik, S.; Devireddy, R.; Gartia, M. R.", venue: "SPIE BiOS Conference 2019", location: "San Francisco, California, USA", format: "Oral Presentation", link: "https://doi.org/10.1117/12.2510836" },
+  { year: 2019, title: "Dark-Field Hyperspectral Imaging of Single Plasmonic Gold Nanorods and Their Scattering Characteristics in Complex Biological Environments", authors: "Mehta, N.â€ ; Sahu, S.â€ ; Shaik, S.; Devireddy, R.; Gartia, M. R.", venue: "SPIE BiOS Conference 2019", location: "San Francisco, California, USA", format: "Oral Presentation", link: "https://doi.org/10.1117/12.2510836" },
   { year: 2019, title: "Non-invasive Spectral Analysis of Osteogenic and Adipogenic Differentiation in Adipose Derived Stem Cells using Dark-field Hyperspectral Imaging Technique", authors: "Mehta, N.; Shaik, S.; Sahu, S.; Devireddy, R.; Gartia, M. R.", venue: "SPIE BiOS Conference 2019", location: "San Francisco, California, USA", format: "Oral Presentation", link: "https://doi.org/10.1117/12.2508731" },
   { year: 2018, title: "Photocatalytic degradation of PFAS by BiPO4 microparticles", authors: "Cates, E. L.; Sahu, S. P.", venue: "255th American Chemical Society National Meeting", location: "New Orleans, LA, USA", format: "Oral Presentation", link: "" },
   { year: 2016, title: "Development of Radiocatalytic Approaches Towards Water Treatment", authors: "Sahu, S.; Cates, E. L.; Johnson, T. A.", venue: "251st American Chemical Society National Meeting", location: "San Diego, USA", format: "Oral Presentation", link: "" },
@@ -1052,7 +1073,7 @@ export const conferencePresentations = [
 
 export const teachingHistory = [
   {
-    period: "2024–2026",
+    period: "2024â€“2026",
     institution: "Amity University",
     details: [
       "Bioanalytical Methods",
@@ -1072,7 +1093,7 @@ export const teachingHistory = [
     audience: "Undergraduate chemistry students",
   },
   {
-    period: "Fall/Spring 2021–2022",
+    period: "Fall/Spring 2021â€“2022",
     institution: "University of Louisiana at Lafayette",
     details: [
       "Organic Lab I CHEM 233",
@@ -1116,35 +1137,35 @@ export const alumniMentoring = [
     role: "Project Associate, Amity University",
   },
   {
-    period: "2024–2025",
+    period: "2024â€“2025",
     name: "Priyamvada Arte",
     currentPosition: "Current Position: R & D Intern at AgroMorph Technosolutions Private Limited, Mumbai",
     degree: "M.Tech. Biotechnology, Amity University",
     role: "",
   },
   {
-    period: "2025–2026",
+    period: "2025â€“2026",
     name: "Dhruv Faldu",
     currentPosition: "Current position: Pursuing B.Tech.+M.Tech. Dual Degree in Biotechnology at Amity University",
     degree: "",
     role: "",
   },
   {
-    period: "2025–2026",
+    period: "2025â€“2026",
     name: "Prathamesh Thepade",
     currentPosition: "Current position: Pursuing B.Tech. Degree in Biotechnology at Amity University",
     degree: "",
     role: "",
   },
   {
-    period: "2025–2026",
+    period: "2025â€“2026",
     name: "Dhruv Singh",
     currentPosition: "Current position: Pursuing M.Sc. Degree in Biotechnology at Amity University",
     degree: "",
     role: "",
   },
   {
-    period: "2025–2026",
+    period: "2025â€“2026",
     name: "Prachi Singh",
     currentPosition: "Current position: Pursuing M.Sc. Degree in Biotechnology at Amity University",
     degree: "",
@@ -1172,11 +1193,11 @@ export const labLeadership = [
 ];
 
 export const professionalAffiliations = [
-  { org: "American Chemical Society (ACS)", period: "Member, 2013–Present" },
-  { org: "Clemson University Postdoctoral Association (CUPDA)", period: "Member, 2015–2016" },
-  { org: "American Association for Advancement of Science (AAAS)", period: "Member, 2012–2014" },
-  { org: "Optical Society of America (OSA)", period: "Member, 2008–2016" },
-  { org: "Society for Applied Spectroscopy (SAS)", period: "Member, 2015–2016" },
+  { org: "American Chemical Society (ACS)", period: "Member, 2013â€“Present" },
+  { org: "Clemson University Postdoctoral Association (CUPDA)", period: "Member, 2015â€“2016" },
+  { org: "American Association for Advancement of Science (AAAS)", period: "Member, 2012â€“2014" },
+  { org: "Optical Society of America (OSA)", period: "Member, 2008â€“2016" },
+  { org: "Society for Applied Spectroscopy (SAS)", period: "Member, 2015â€“2016" },
 ];
 
 export const professionalActivities = [
@@ -1202,3 +1223,6 @@ export const academicProfileTabs = [
 ];
 
 export const academicProfileSummary = "The academic profile below captures the broad research expertise, scholarly record, mentoring responsibilities and professional service associated with Dr. Sushant Prabhakar Sahu's role as a faculty member, PI and research leader.";
+
+
+

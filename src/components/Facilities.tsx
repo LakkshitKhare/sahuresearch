@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { facilities } from "@/lib/content";
 import { cn } from "@/utils/cn";
 import { useBodyScrollLock, useEscape } from "@/lib/hooks";
@@ -62,9 +62,13 @@ function Lightbox({
   );
 }
 
-const externalLinks = [
+const externalLinks: { name: ReactNode; href: string }[] = [
   {
-    name: "Central Research Facility (CRF)",
+    name: (
+      <>
+        <span className="text-electric">Central Research Facility</span> (CRF)
+      </>
+    ),
     href: "https://crf.kiit.ac.in/",
   },
   {

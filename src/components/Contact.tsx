@@ -205,7 +205,7 @@ export function Contact() {
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 px-7 py-5 lg:px-8">
                   <dt className="label text-ink-400">Address</dt>
                   <dd className="lg:ml-auto text-right text-[0.875rem] leading-relaxed text-ink-500">
-                    110/Central Research Facility Building<br />
+                    110/<span className="text-electric">Central Research Facility</span> Building<br />
                     KIIT University Campus 3<br />
                     Patia, Bhubaneswar-751024<br />
                     Odisha, India

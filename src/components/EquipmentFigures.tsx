@@ -43,10 +43,16 @@ function Autoclave() {
 
 function Stirrer() {
   return (
-    <InstrumentAsset
-      src="/instrument-archive/06-ultrasonicator.jpeg"
-      alt="05 Magnetic Stirrer with Hot Plate"
-    />
+    <div className="grid gap-4 sm:grid-cols-2">
+      <InstrumentAsset
+        src="/instrument-archive/06-ultrasonicator.jpeg"
+        alt="05 Magnetic Stirrer"
+      />
+      <InstrumentAsset
+        src="/instrument-archive/13-image.jpeg"
+        alt="13 Magnetic Stirrer"
+      />
+    </div>
   );
 }
 
@@ -95,6 +101,33 @@ function PowerSupply() {
   );
 }
 
+function Refrigerator() {
+  return (
+    <InstrumentAsset
+      src="/instrument-archive/11-fridge.png"
+      alt="11 Refrigerator"
+    />
+  );
+}
+
+function ProbeSonicator() {
+  return (
+    <InstrumentAsset
+      src="/instrument-archive/12-image.png"
+      alt="12 Probe Sonicator"
+    />
+  );
+}
+
+function MagneticStirrer() {
+  return (
+    <InstrumentAsset
+      src="/instrument-archive/13-image.jpeg"
+      alt="13 Magnetic Stirrer"
+    />
+  );
+}
+
 const FIGURES: Record<Facility["figure"], () => ReactNode> = {
   potentiostat: Potentiostat,
   smartpot: SmartPot,
@@ -106,6 +139,9 @@ const FIGURES: Record<Facility["figure"], () => ReactNode> = {
   phmeter: PhMeter,
   furnace: Furnace,
   powersupply: PowerSupply,
+  refrigerator: Refrigerator,
+  probesonicator: ProbeSonicator,
+  magneticstirrer: MagneticStirrer,
 };
 
 export function EquipmentFigure({ kind }: { kind: Facility["figure"] }) {
