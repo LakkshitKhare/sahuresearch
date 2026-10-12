@@ -8,10 +8,9 @@ import {
   labLeadership,
   patents,
   professionalAffiliations,
-  projectFunding,
   publications,
   researchSpecializations,
-  studentMentoring,
+  alumniMentoring,
   teachingApproach,
   teachingHistory,
 } from "@/lib/content";
@@ -24,9 +23,8 @@ const tabs = [
   "Awards & Honors",
   "Patents",
   "Conference Presentations",
-  "Research Projects",
   "Teaching",
-  "Student Mentoring",
+  "Alumni",
   "Research Leadership",
   "Professional Services",
 ] as const;
@@ -117,33 +115,6 @@ export function AcademicProfile() {
             ))}
           </div>
         );
-      case "Research Projects":
-        return (
-          <div className="space-y-8">
-            <div>
-              <p className="label text-ink-400">Awarded</p>
-              <div className="mt-5 border border-line bg-white p-6">
-                <p className="font-mono text-[0.625rem] uppercase tracking-[0.16em] text-electric">{projectFunding.awarded[0].label}</p>
-                <h3 className="mt-4 text-[1.5rem] leading-snug text-ink">{projectFunding.awarded[0].title}</h3>
-                <p className="mt-4 text-[0.9375rem] text-ink-500">{projectFunding.awarded[0].cost}</p>
-                <p className="mt-3 text-[0.9375rem] text-ink-500">{projectFunding.awarded[0].pi}</p>
-              </div>
-            </div>
-            <div>
-              <p className="label text-ink-400">Submitted</p>
-              <div className="mt-5 space-y-5">
-                {projectFunding.submitted.map((project) => (
-                  <div key={project.label} className="border border-line bg-white p-6">
-                    <p className="font-mono text-[0.625rem] uppercase tracking-[0.16em] text-electric">{project.label}</p>
-                    <h3 className="mt-4 text-[1.25rem] leading-snug text-ink">{project.title}</h3>
-                    <p className="mt-4 text-[0.875rem] text-ink-500">{project.pi}</p>
-                    <p className="mt-2 text-[0.875rem] text-ink-500">{project.coPi}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        );
       case "Teaching":
         return (
           <div className="space-y-7">
@@ -165,18 +136,18 @@ export function AcademicProfile() {
             </div>
           </div>
         );
-      case "Student Mentoring":
+      case "Alumni":
         return (
           <div className="space-y-6">
-            {studentMentoring.map((student, index) => (
-              <Reveal key={student.name} delay={index * 60} className="relative pl-8">
+            {alumniMentoring.map((student, index) => (
+              <Reveal key={`${student.period}-${student.name}`} delay={index * 60} className="relative pl-8">
                 <span className="absolute left-0 top-1.5 h-3 w-3 rounded-full border border-electric bg-electric/10" aria-hidden="true" />
                 <div className="border border-line bg-white p-5">
                   <p className="font-mono text-[0.625rem] uppercase tracking-[0.14em] text-electric">{student.period}</p>
                   <h3 className="mt-4 text-[1.2rem] leading-snug text-ink">{student.name}</h3>
-                  <p className="mt-2 text-[0.875rem] text-ink-500">{student.degree}</p>
-                  <p className="mt-2 text-[0.875rem] text-ink-500">{student.role}</p>
-                  <p className="mt-3 text-[0.875rem] leading-relaxed text-ink-600">{student.project}</p>
+                  {student.currentPosition ? <p className="mt-2 text-[0.875rem] text-ink-500">{student.currentPosition}</p> : null}
+                  {student.degree ? <p className="mt-2 text-[0.875rem] text-ink-500">{student.degree}</p> : null}
+                  {student.role ? <p className="mt-2 text-[0.875rem] text-ink-500">{student.role}</p> : null}
                 </div>
               </Reveal>
             ))}

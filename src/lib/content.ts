@@ -132,7 +132,7 @@ export const researchAreas: ResearchArea[] = [
   {
     id: "ionic-polymers",
     index: "03",
-    label: "Ionic polymers &amp; membranes",
+    label: "Ionic polymers &   membranes",
     title:
       "Ionic Polymers / Polymer Membranes in Water Treatment Technologies and Electrochemical Processes",
     short:
@@ -238,8 +238,8 @@ export type Publication = {
   authors: string;
   journal: string;
   volume: string;
-  doi: string;
-  url: string;
+  doi?: string;
+  url?: string;
   tocGraphic?: string;
   keywords?: string[];
 };
@@ -259,13 +259,36 @@ function archivedPublication(
     authors,
     journal,
     volume,
-    doi,
-    url: `https://doi.org/${doi}`,
+    ...(doi ? { doi, url: `https://doi.org/${doi}` } : {}),
     ...(tocGraphic ? { tocGraphic } : {}),
   };
 }
 
 export const publications: Publication[] = [
+  {
+    year: 2026,
+    title: "Phosphate-Triggered Coordination Reorganization and Activation in Copper-Orotate Supramolecular Catalyst for Phenol Oxidation under Aerobic Conditions",
+    authors: "Rathod, S.; Gudda, V.; Kurade, A.; Sahu, S.P.; Roy, B.",
+    journal: "Submitted",
+    volume: "",
+    keywords: [],
+  },
+  {
+    year: 2026,
+    title: "Cost-Effective Perfluorinated Anion Exchange Ionomer Coated Cobalt Electrodes for Rapid and Direct Sensing of PFOA",
+    authors: "Arte, P.; Khera, S.; Thepade, P.; Faldu, D.; Wang, Y.; Pivovar, B.; Singh, S.; Bhatiskar, V.; Sahu, S.P.;",
+    journal: "Submitted",
+    volume: "",
+    keywords: [],
+  },
+  {
+    year: 2026,
+    title: "From Bench to Bedside: Advances in Non-enzymatic Electrochemical Creatinine Sensors and Their Current Status in Translation to Point-of-Care Applications",
+    authors: "Arte, P.; Faldu, D.; Thepade, P.; Faldu, D.; Yadav, A.; Vamse, M.; Dey, I.; Kulkarni, S.; Valluri, S.; Kumari, N.; Singh, S.; Sahu, R.; Gartia, M. R.; Sahu, S. P.,",
+    journal: "in revision",
+    volume: "",
+    keywords: [],
+  },
   {
     year: 2025,
     title: "Facile Single-Step Synthesis of PVP-Stabilized Ru NPs for Electrochemical Hydrogen Generation",
@@ -713,14 +736,13 @@ export type Facility = {
     | "vacuumoven"
     | "phmeter"
     | "furnace"
-    | "fumehood"
     | "powersupply";
 };
 
 export const facilities: Facility[] = [
   {
     id: "potentiostat",
-    name: "Potentiostat / Galvanostat",
+    name: "01 Potentiostat / Galvanostat Admiral Instruments, USA",
     detail: "Electrochemical Work Station",
     vendor: "Admiral Instruments, USA",
     description:
@@ -730,8 +752,8 @@ export const facilities: Facility[] = [
   },
   {
     id: "smartpot",
-    name: "SensitSmart Smartphone Potentiostat",
-    detail: "Portable electrochemical measurements",
+    name: "02 SensitSmart Smartphone Potentiostat PalmSens, Netherlands",
+    detail: "Portable Electrochemical Measurements",
     vendor: "PalmSens, Netherlands",
     description:
       "A compact potentiostat that pairs with a smartphone, enabling field measurements outside the laboratory bench without loss of measurement quality.",
@@ -740,9 +762,9 @@ export const facilities: Facility[] = [
   },
   {
     id: "pem",
-    name: "PEM Electrolyser Flow Cell",
-    detail: "Membrane electrode assembly",
-    vendor: "Laboratory flow cell",
+    name: "03 Proton Exchange Membrane (PEM) Electrolyser Flow Cell",
+    detail: "Membrane Electrode Assembly",
+    vendor: "Laboratory Flow Cell",
     description:
       "A proton-exchange membrane electrolyser flow cell for continuous gas evolution experiments under controlled electrolyte flow.",
     application: "Hydrogen evolution, water splitting, electrolyser performance testing",
@@ -750,9 +772,9 @@ export const facilities: Facility[] = [
   },
   {
     id: "autoclave",
-    name: "Hydrothermal Autoclaves",
-    detail: "High-pressure synthesis",
-    vendor: "Laboratory autoclave reactors",
+    name: "04 Hydrothermal Autoclaves",
+    detail: "High-Pressure Synthesis",
+    vendor: "Laboratory Autoclave Reactors",
     description:
       "Sealed pressure vessels for hydrothermal and solvothermal synthesis of nanomaterials, catalysts and polymer gels at elevated temperature.",
     application: "Synthesis of catalytic nanomaterials and ionic polymer gels",
@@ -760,9 +782,9 @@ export const facilities: Facility[] = [
   },
   {
     id: "stirrer",
-    name: "Magnetic Stirrer with Hot Plate",
-    detail: "Heating and mixing",
-    vendor: "Laboratory hot plate stirrer",
+    name: "05 Magnetic Stirrer with Hot Plate",
+    detail: "Heating and Mixing",
+    vendor: "Laboratory Hot Plate Stirrer",
     description:
       "Temperature-controlled stirring for solution preparation, polymerisation reactions and electrodeposition baths.",
     application: "Polymerisation, electrodeposition, solution-phase synthesis",
@@ -770,9 +792,9 @@ export const facilities: Facility[] = [
   },
   {
     id: "sonicator",
-    name: "Ultrasonicator",
-    detail: "Dispersion and homogenisation",
-    vendor: "Laboratory ultrasonicator",
+    name: "06 Ultrasonicator",
+    detail: "Dispersion and Homogenisation",
+    vendor: "Laboratory Ultrasonicator",
     description:
       "Probe and bath ultrasonication for dispersing nanoparticles, degassing solutions and homogenising polymer dispersions.",
     application: "Nanoparticle dispersion, electrode surface preparation",
@@ -780,9 +802,9 @@ export const facilities: Facility[] = [
   },
   {
     id: "vacuumoven",
-    name: "Vacuum Oven",
-    detail: "Drying under reduced pressure",
-    vendor: "Laboratory vacuum oven",
+    name: "07 Vacuum Oven",
+    detail: "Drying Under Reduced Pressure",
+    vendor: "Laboratory Vacuum Oven",
     description:
       "Low-pressure drying of membranes, gels and electrode coatings at controlled temperature without thermal degradation.",
     application: "Membrane and polymer gel drying, electrode conditioning",
@@ -790,9 +812,9 @@ export const facilities: Facility[] = [
   },
   {
     id: "phmeter",
-    name: "Digital pH Meter",
-    detail: "Solution characterisation",
-    vendor: "Bench pH meter",
+    name: "08 Digital pH Meter",
+    detail: "Solution Characterisation",
+    vendor: "Bench pH Meter",
     description:
       "Precision pH measurement for electrolyte preparation, buffer control and validation of sensing experiments.",
     application: "Electrolyte and sensor matrix preparation",
@@ -800,29 +822,19 @@ export const facilities: Facility[] = [
   },
   {
     id: "furnace",
-    name: "CVD Tube Furnace with Gas Cylinders",
-    detail: "High-temperature processing",
-    vendor: "Tube furnace with gas delivery",
+    name: "09 CVD Tube Furnace with Argon Gas Cylinders",
+    detail: "High-Temperature Processing",
+    vendor: "Tube Furnace with Gas Delivery",
     description:
       "A high-temperature tube furnace with gas cylinder delivery for chemical vapour deposition, calcination and controlled-atmosphere heat treatment.",
     application: "Catalyst calcination, CVD growth, thermal treatment of materials",
     figure: "furnace",
   },
   {
-    id: "fumehood",
-    name: "Fume Hoods",
-    detail: "Containment and safe handling",
-    vendor: "Laboratory fume enclosures",
-    description:
-      "Ventilated enclosures providing containment for solvent handling, acidic and alkaline electrolyte preparation and volatile reagent work.",
-    application: "Safe handling of electrolytes, solvents and reagents",
-    figure: "fumehood",
-  },
-  {
     id: "powersupply",
-    name: "DC Power Supply",
-    detail: "Programmable current / voltage source",
-    vendor: "Bench DC power supply",
+    name: "10 DC Power Supply",
+    detail: "Programmable Current / Voltage Source",
+    vendor: "Bench DC Power Supply",
     description:
       "A stabilised direct-current supply for electrodeposition, cell polarisation and constant-current electrochemical experiments.",
     application: "Electrodeposition, constant-current electrolysis",
@@ -1038,31 +1050,6 @@ export const conferencePresentations = [
   { year: 2013, title: "Nanoscale Dirty Carbon with Plenty of Beauties - From Energy Conversion to Photocatalysts and Mechanistic Implications", authors: "Sahu, S.; Sun, Y.-P.", venue: "The 18th International conference on Semiconductor Photocatalysis and Solar Energy Conversion (SPASEC-18)", location: "San Diego, California, USA", format: "Oral Presentation", link: "" },
 ];
 
-export const projectFunding = {
-  awarded: [
-    {
-      label: "DST-ANRF Ramanujan Fellowship 2023–2028",
-      cost: "Project Cost: ₹119 Lakhs",
-      title: "Understanding Photo-electrocatalytic Charge Transfer Processes in CO2 to Solar Chemical Fuel Conversion Using Carbon Dots: Towards Development of Metal Free Electrocatalysts",
-      pi: "PI: Dr. Sushant Sahu",
-    },
-  ],
-  submitted: [
-    {
-      label: "ANRF-ARG 2026",
-      title: "Portable Electrochemical Sensor Integrated with Machine Learning Model for Accurate and Quantitative Determination of Perfluoroalkyl Acids from Various Water Sources",
-      pi: "PI: Dr. Sushant Sahu (KIIT)",
-      coPi: "Co-PI: Prof. Rojalin Sahu (KIIT)",
-    },
-    {
-      label: "ANRF MAHA WATER PROGRAM 2026",
-      title: "Remediation of Perfluoroalkyl Substances and Heavy Metals by Fluorinated Polymers: Separation Mechanisms, Role of Polymer Structure, and Performance in a Practical System for Community-Based Water Treatment Technologies in Odisha",
-      pi: "PI: Dr. Sushant Sahu",
-      coPi: "Co-PIs: Dr. Narayan Jena (KIIT), Prof. Rojalin Sahu (KIIT), Dr. Sushma Chakraborty (ICT Bhubaneswar)",
-    },
-  ],
-};
-
 export const teachingHistory = [
   {
     period: "2024–2026",
@@ -1120,48 +1107,48 @@ export const teachingApproach = [
   "Regular office hours",
 ];
 
-export const studentMentoring = [
+export const alumniMentoring = [
   {
+    period: "2024-2026",
     name: "Mr. Rahul Bhise",
+    currentPosition: "Current Position: R & D Engineer Thermax Ltd., Pune",
     degree: "M.Sc., Shivaji University",
-    role: "Project Associate / Ph.D. Student at Amity University",
-    period: "January 2024 – April 2026",
-    project: "Development of catalysts for electrochemical water splitting and beyond",
+    role: "Project Associate, Amity University",
   },
   {
-    name: "Priyamvada Arte",
-    degree: "M.Tech. Student",
-    role: "Student mentee",
     period: "2024–2025",
-    project: "Research project supervision",
+    name: "Priyamvada Arte",
+    currentPosition: "Current Position: R & D Intern at AgroMorph Technosolutions Private Limited, Mumbai",
+    degree: "M.Tech. Biotechnology, Amity University",
+    role: "",
   },
   {
+    period: "2025–2026",
     name: "Dhruv Faldu",
-    degree: "B.Tech. Student",
-    role: "Student mentee",
-    period: "2025–2026",
-    project: "Capstone and research engagement",
+    currentPosition: "Current position: Pursuing B.Tech.+M.Tech. Dual Degree in Biotechnology at Amity University",
+    degree: "",
+    role: "",
   },
   {
+    period: "2025–2026",
     name: "Prathamesh Thepade",
-    degree: "B.Tech. Student",
-    role: "Student mentee",
+    currentPosition: "Current position: Pursuing B.Tech. Degree in Biotechnology at Amity University",
+    degree: "",
+    role: "",
+  },
+  {
     period: "2025–2026",
-    project: "Capstone and research engagement",
-  },
-  {
-    name: "Prachi Singh",
-    degree: "M.Sc. Student",
-    role: "Student mentee",
-    period: "2026",
-    project: "Research mentoring",
-  },
-  {
     name: "Dhruv Singh",
-    degree: "M.Sc. Student",
-    role: "Student mentee",
-    period: "2026",
-    project: "Research mentoring",
+    currentPosition: "Current position: Pursuing M.Sc. Degree in Biotechnology at Amity University",
+    degree: "",
+    role: "",
+  },
+  {
+    period: "2025–2026",
+    name: "Prachi Singh",
+    currentPosition: "Current position: Pursuing M.Sc. Degree in Biotechnology at Amity University",
+    degree: "",
+    role: "",
   },
 ];
 
@@ -1208,9 +1195,8 @@ export const academicProfileTabs = [
   "Awards & Honors",
   "Patents",
   "Conference Presentations",
-  "Research Projects",
   "Teaching",
-  "Student Mentoring",
+  "Alumni",
   "Research Leadership",
   "Professional Services",
 ];

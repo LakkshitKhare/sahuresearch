@@ -45,11 +45,14 @@ export function Publications() {
       if (!q) return true;
 
       const keywords = (pub.keywords ?? []).join(" ").toLowerCase();
+      const doiValue = pub.doi?.toLowerCase() ?? "";
+      const journalValue = pub.journal?.toLowerCase() ?? "";
+
       return (
         pub.title.toLowerCase().includes(q) ||
         pub.authors.toLowerCase().includes(q) ||
-        pub.journal.toLowerCase().includes(q) ||
-        pub.doi.toLowerCase().includes(q) ||
+        journalValue.includes(q) ||
+        doiValue.includes(q) ||
         String(pub.year).includes(q) ||
         keywords.includes(q)
       );
@@ -65,6 +68,47 @@ export function Publications() {
     }
     return [...map.entries()].sort((a, b) => b[0] - a[0]);
   }, [filtered]);
+
+  const renderPublicationImage = (pub: (typeof publications)[number]) => {
+    const statusText =
+      pub.year === 2026 && (pub.journal.toLowerCase() === "submitted" || pub.journal.toLowerCase() === "in revision")
+        ? pub.journal.toLowerCase() === "submitted"
+          ? "Submitted"
+          : "In Revision"
+        : null;
+
+    if (statusText) {
+      return (
+        <div className="flex h-32 w-52 shrink-0 items-center justify-center overflow-hidden rounded-md border border-line bg-paper-50 text-center text-[0.9rem] font-semibold uppercase tracking-[0.18em] text-ink-600 shadow-sm sm:h-40 sm:w-64 lg:h-48 lg:w-[22rem] lg:text-[1.2rem]">
+          {statusText}
+        </div>
+      );
+    }
+
+    if (pub.tocGraphic) {
+      return (
+        <a
+          href={pub.url || undefined}
+          target={pub.url ? "_blank" : undefined}
+          rel={pub.url ? "noopener noreferrer" : undefined}
+          className="block h-32 w-52 shrink-0 overflow-hidden rounded-md border border-line bg-white shadow-sm transition-transform duration-300 hover:scale-[1.02] sm:h-40 sm:w-64 lg:h-48 lg:w-[22rem]"
+        >
+          <img
+            src={pub.tocGraphic}
+            alt={`${pub.title} graphical abstract`}
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </a>
+      );
+    }
+
+    return (
+      <div className="flex h-32 w-52 shrink-0 items-center justify-center rounded-md border border-dashed border-line bg-paper-50 text-[0.55rem] font-mono uppercase tracking-[0.2em] text-ink-300 sm:h-40 sm:w-64 lg:h-48 lg:w-[22rem]">
+        image
+      </div>
+    );
+  };
 
   return (
     <section id="publications" className="relative scroll-mt-20 bg-paper py-24 lg:py-32">
@@ -157,7 +201,7 @@ export function Publications() {
 
                 <ul className="mt-2">
                   {items.map((pub, index) => (
-                    <li key={`${pub.doi}-${index}`} className="group/list">
+                    <li key={`${pub.doi ?? pub.title}-${index}`} className="group/list">
                       <Reveal delay={60 + index * 60} className="border-b border-line-soft py-6 transition-[background-color] duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] hover:bg-paper-100/70">
                         <article>
                           <div className="flex flex-col justify-center">
@@ -165,36 +209,22 @@ export function Publications() {
                               <span className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-400">
                                 {String(index + 1).padStart(2, "0")}
                               </span>
-                              {pub.tocGraphic ? (
-                                <a
-                                  href={pub.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block h-32 w-52 shrink-0 overflow-hidden rounded-md border border-line bg-white shadow-sm transition-transform duration-300 hover:scale-[1.02] sm:h-40 sm:w-64 lg:h-48 lg:w-[22rem]"
-                                >
-                                  <img
-                                    src={pub.tocGraphic}
-                                    alt={`${pub.title} graphical abstract`}
-                                    className="h-full w-full object-cover"
-                                    loading="lazy"
-                                  />
-                                </a>
-                              ) : (
-                                <div className="flex h-32 w-52 shrink-0 items-center justify-center rounded-md border border-dashed border-line bg-paper-50 text-[0.55rem] font-mono uppercase tracking-[0.2em] text-ink-300 sm:h-40 sm:w-64 lg:h-48 lg:w-[22rem]">
-                                  image
-                                </div>
-                              )}
+                              {renderPublicationImage(pub)}
                               <div className="flex-1">
                                 <h4 className="max-w-[32ch] text-[1.12rem] leading-[1.3] text-ink transition-all duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/list:text-ink-700 lg:text-[1.38rem]">
-                                  <a
-                                    href={pub.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 hover:text-electric"
-                                  >
-                                    {pub.title}
-                                    <ArrowUpRight size={15} className="shrink-0 transition-transform duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
-                                  </a>
+                                  {pub.url ? (
+                                    <a
+                                      href={pub.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-2 hover:text-electric"
+                                    >
+                                      {pub.title}
+                                      <ArrowUpRight size={15} className="shrink-0 transition-transform duration-[350ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
+                                    </a>
+                                  ) : (
+                                    <span className="inline-flex items-center gap-2">{pub.title}</span>
+                                  )}
                                 </h4>
 
                                 <p className="mt-3 max-w-[68ch] text-[0.875rem] leading-relaxed text-ink-500">
@@ -202,31 +232,37 @@ export function Publications() {
                                 </p>
 
                                 <p className="mt-4 font-mono text-[0.65625rem] uppercase tracking-[0.16em] text-ink-400">
-                                  <span className="text-ink-500">{pub.journal.toUpperCase()}</span>
+                                  <span className="text-ink-500">{pub.journal}</span>
                                   <span className="mx-2 text-line">·</span>
                                   {pub.year}
                                 </p>
 
-                                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-[0.75rem] font-medium text-ink-500">
-                                  <a
-                                    href={`https://doi.org/${pub.doi}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 transition-colors duration-300 hover:text-electric"
-                                  >
-                                    DOI
-                                    <ArrowUpRight size={12} className="transition-transform duration-300 group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
-                                  </a>
-                                  <a
-                                    href={pub.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 transition-colors duration-300 hover:text-electric"
-                                  >
-                                    View Publication
-                                    <ArrowUpRight size={12} className="transition-transform duration-300 group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
-                                  </a>
-                                </div>
+                                {pub.doi || pub.url ? (
+                                  <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-[0.75rem] font-medium text-ink-500">
+                                    {pub.doi ? (
+                                      <a
+                                        href={`https://doi.org/${pub.doi}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 transition-colors duration-300 hover:text-electric"
+                                      >
+                                        DOI
+                                        <ArrowUpRight size={12} className="transition-transform duration-300 group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
+                                      </a>
+                                    ) : null}
+                                    {pub.url ? (
+                                      <a
+                                        href={pub.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 transition-colors duration-300 hover:text-electric"
+                                      >
+                                        View Publication
+                                        <ArrowUpRight size={12} className="transition-transform duration-300 group-hover/list:translate-x-0.5 group-hover/list:-translate-y-0.5" />
+                                      </a>
+                                    ) : null}
+                                  </div>
+                                ) : null}
                               </div>
                             </div>
                           </div>
