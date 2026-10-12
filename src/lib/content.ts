@@ -96,16 +96,16 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrified molecular systems",
     title: "Electrified Molecular Systems for Sustainable Catalysis and Chemical Fuels",
     short:
-      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H‚‚. We are also interested in CO‚‚ electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
+      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H. We are also interested in CO electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
     description:
-      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO‚‚ conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H‚‚ more efficiently, with high selectivity and rapid rates of production.",
+      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H more efficiently, with high selectivity and rapid rates of production.",
     applications: [
       "Industrial-scale water electrolysers",
       "Fuel cell technologies",
-      "CO‚‚ conversion to chemical fuels",
-      "High-selectivity H‚‚ production",
+      "CO conversion to chemical fuels",
+      "High-selectivity H production",
     ],
-    keywords: ["Electrocatalysis", "Water splitting", "CO‚‚ reduction", "HER", "Electrolyser"],
+    keywords: ["Electrocatalysis", "Water splitting", "CO reduction", "HER", "Electrolyser"],
     figure: "electrolyser",
     align: "left",
   },
@@ -202,8 +202,8 @@ export const ecosystem: EcosystemNode[] = [
     id: "catalysis",
     label: "Catalysis",
     description:
-      "Scalable catalytic materials drive the breaking and making of chemical bonds ” water splitting to H‚‚ and the conversion of CO‚‚.",
-    technologies: ["Water splitting", "CO‚‚ conversion", "Hydrogen evolution", "Electrolyser flow cells"],
+      "Scalable catalytic materials drive the breaking and making of chemical bonds ” water splitting to H and the conversion of CO.",
+    technologies: ["Water splitting", "CO conversion", "Hydrogen evolution", "Electrolyser flow cells"],
   },
   {
     id: "biosensors",
@@ -316,7 +316,7 @@ export const publications: Publication[] = [
   {
     year: 2020,
     title:
-      "Impacts of Reactor Configuration, Degradation Mechanisms, and Water Matrices on Perfluorocarboxylic Acid Treatment Efficiency by the UV/Bi‚ƒO(OH)(PO‚„)‚‚ Photocatalytic Process",
+      "Impacts of Reactor Configuration, Degradation Mechanisms, and Water Matrices on Perfluorocarboxylic Acid Treatment Efficiency by the UV/Bi‚ƒO(OH)(PO‚„) Photocatalytic Process",
     authors: "Mojtaba Qanbarzadeh, Dawei Wang, Mohamed Ateia, **Sushant P. Sahu**, Ezra L. Cates",
     journal: "ACS ES&T Engineering",
     volume: "1(2), 239“248",
@@ -340,7 +340,7 @@ export const publications: Publication[] = [
   {
     year: 2018,
     title:
-      "Rapid Degradation and Mineralization of Perfluorooctanoic Acid by a New Petitjeanite Bi‚ƒO(OH)(PO‚„)‚‚ Microparticle Ultraviolet Photocatalyst",
+      "Rapid Degradation and Mineralization of Perfluorooctanoic Acid by a New Petitjeanite Bi‚ƒO(OH)(PO‚„) Microparticle Ultraviolet Photocatalyst",
     authors:
       "**Sushant P. Sahu**, Mojtaba Qanbarzadeh, Mohamed Ateia, Hamed Torkzadeh, Amith S. Maroli, Ezra L. Cates",
     journal: "Environmental Science & Technology Letters",
@@ -361,7 +361,7 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2025,
-    "Guanine-Assisted Contrived Low Pt-Integrated Mo‚‚C/C for Hydrogen Evolution Reaction",
+    "Guanine-Assisted Contrived Low Pt-Integrated MoC/C for Hydrogen Evolution Reaction",
     "Tapan Ping, Smruti Vardhan Purohit, **Sushant P. Sahu**, Bibek Dash, Bikash Kumar Jena",
     "Langmuir",
     "10.1021/acs.langmuir.4c04383",
@@ -397,7 +397,7 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2023,
-    "Current Prospects of Carbon-Based Nanodots in Photocatalytic CO‚‚ Conversion",
+    "Current Prospects of Carbon-Based Nanodots in Photocatalytic CO Conversion",
     "**Sushant P. Sahu**, Christabel Adjah-Tetteh, Nagapradeep Nidamanuri, Sumit K. Sonkar, Erin U. Antia, Tam Tran, Guanguang Xia, Yudong Wang, Ryan Simon, Manas Ranjan Gartia, Supratik Mukhopadhyay, Yu Wang, Xiao-Dong Zhou",
     "Carbon Quantum Dots for Sustainable Energy and Optoelectronics",
     "10.1016/B978-0-323-90895-5.00020-5",
@@ -661,7 +661,7 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2011,
-    "Carbon Nanoparticles as Visible-Light Photocatalysts for Efficient CO‚‚ Conversion and Beyond",
+    "Carbon Nanoparticles as Visible-Light Photocatalysts for Efficient CO Conversion and Beyond",
     "Li Cao, **Sushant P. Sahu**, Parambath Anilkumar, Christopher E. Bunker, Juan Xu, K. A. Shiral Fernando, Ping Wang, Elena A. Guliants, Kenneth N. Tackett, Ya-Ping Sun",
     "Journal of the American Chemical Society",
     "10.1021/ja200804h",
@@ -749,7 +749,7 @@ export const facilities: Facility[] = [
     vendor: "Admiral Instruments, USA",
     description:
       "A full electrochemical workstation for controlled-potential and controlled-current experiments, supporting voltammetry, impedance and long-duration electrolysis.",
-    application: "Electrocatalysis, water splitting, CO‚‚ reduction, sensor characterisation",
+    application: "Electrocatalysis, water splitting, CO reduction, sensor characterisation",
     figure: "potentiostat",
   },
   {
