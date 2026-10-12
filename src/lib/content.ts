@@ -34,7 +34,7 @@ export const bio = {
   paragraphs: [
     "Dr. Sushant Prabhakar Sahu is Assistant Professor and Ramanujan Faculty Fellow at the Centre of Innovation and Research, Kalinga Institute of Industrial Technology (KIIT) Deemed to be University, Bhubaneswar, Odisha.",
     "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules â€” including water splitting for hydrogen & oxygen, the reduction of COâ‚‚, C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
-    "His peer-reviewed work has appeared in top Q1 journals including JACS, Environmental Science & Technology, ACS Omega, J. Phys. Chem C, ACS ES&T Engineering and Energy & Fuels, etc. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research Electrochemical sensing and photocatalysis at Louisiana State University, Baton Rouge",
+    "His peer-reviewed work has appeared in top Q1 journals including JACS, Environmental Science & Technology, ACS Omega, J. Phys. Chem. C, ACS ES&T Engineering and Energy & Fuels, etc. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research on electrochemical sensing, optical microscopy and photocatalysis at Louisiana State University and Clemson University, USA.",
   ],
   facts: [
     { term: "Academic position", value: "Assistant Professor and Ramanujan Faculty Fellow" },
@@ -188,7 +188,7 @@ export const ecosystem: EcosystemNode[] = [
     id: "nanotech",
     label: "Nanotechnology",
     description:
-      "Design of Nanoscale materials â€” Morphology controlled synthesis of catalysts, metal nanoparticles, plasmonic structures and ionic polymers â€” form the material basis in the laboratory.",
+      "Design of Nanoscale materials Morphology controlled synthesis of catalysts, metal nanoparticles, plasmonic structures and ionic polymers form the material basis in the laboratory.",
     technologies: ["Ru nanoparticles", "Plasmonic nanomaterials", "Nanoscale optical probes", "Polymer gels"],
   },
   {
