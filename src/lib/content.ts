@@ -138,7 +138,7 @@ export const researchAreas: ResearchArea[] = [
     short:
       "We utilize simple polymerization techniques like radical polymerization, chemical oxidative polymerization to prepare ionic conductive polymer membranes and polymer gels. These membranes are designed for effective removal of water contaminants and to facilitate advanced electrochemical separations.",
     description:
-      "The research utilises polymerisation techniques, including radical polymerisation and interfacial polymerisation, to prepare ionic polymer membranes and polymer gels. These materials are designed for the effective removal of water contaminants, the removal and recovery of precious metals, the removal of toxic heavy metals, and advanced electrochemical separations and electrocatalytic processes.",
+      "The research utilises polymerization techniques, including radical polymerization and interfacial polymerization, to prepare ionic polymer membranes and polymer gels. These materials are designed for the effective removal of water contaminants, the removal and recovery of precious metals, the removal of toxic heavy metals, and advanced electrochemical separations and electrocatalytic processes.",
     applications: [
       "Removal of water contaminants",
       "Removal / recovery of precious metals",
@@ -146,7 +146,7 @@ export const researchAreas: ResearchArea[] = [
       "Advanced electrochemical separations",
       "Electrocatalytic processes",
     ],
-    keywords: ["Ionomer membranes", "Radical polymerisation", "Interfacial polymerisation", "Ion exchange", "Separations"],
+    keywords: ["Ionomer membranes", "Radical polymerization", "Interfacial polymerization", "Ion exchange", "Separations"],
     figure: "membrane",
     align: "left",
   },
@@ -788,7 +788,7 @@ export const facilities: Facility[] = [
     detail: "Heating and Mixing",
     vendor: "Laboratory Hot Plate Stirrer",
     description:
-      "Temperature-controlled stirring for solution preparation, polymerisation reactions and electrodeposition baths.",
+      "Temperature-controlled stirring for solution preparation, polymerization reactions and electrodeposition baths.",
     application: "Polymerisation, electrodeposition, solution-phase synthesis",
     figure: "stirrer",
   },
