@@ -33,7 +33,7 @@ export const bio = {
     "Research at the interface of electrochemistry, nanotechnology and bioimaging ” developing electrified molecular systems, sensors and membranes for energy, environment and health.",
   paragraphs: [
     "Dr. Sushant Prabhakar Sahu is Assistant Professor and Ramanujan Faculty Fellow at the Centre of Innovation and Research, Kalinga Institute of Industrial Technology (KIIT) Deemed to be University, Bhubaneswar, Odisha.",
-    "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules ” including water splitting for hydrogen & oxygen, the reduction of CO C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
+    "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules including water splitting for hydrogen & oxygen, the reduction of CO2 , C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
     "His peer-reviewed work has appeared in top Q1 journals including JACS, Environmental Science & Technology, ACS Omega, J. Phys. Chem. C, ACS ES&T Engineering and Energy & Fuels, etc. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research on electrochemical sensing, optical microscopy and photocatalysis at Louisiana State University and Clemson University, USA.",
   ],
   facts: [
@@ -96,16 +96,16 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrified molecular systems",
     title: "Electrified Molecular Systems for Sustainable Catalysis and Chemical Fuels",
     short:
-      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H. We are also interested in CO electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
+      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H. We are also interested in CO2  electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
     description:
-      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H more efficiently, with high selectivity and rapid rates of production.",
+      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO2  conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H more efficiently, with high selectivity and rapid rates of production.",
     applications: [
       "Industrial-scale water electrolysers",
       "Fuel cell technologies",
-      "CO conversion to chemical fuels",
+      "CO2  conversion to chemical fuels",
       "High-selectivity H production",
     ],
-    keywords: ["Electrocatalysis", "Water splitting", "CO reduction", "HER", "Electrolyser"],
+    keywords: ["Electrocatalysis", "Water splitting", "CO2  reduction", "HER", "Electrolyser"],
     figure: "electrolyser",
     align: "left",
   },
@@ -203,7 +203,7 @@ export const ecosystem: EcosystemNode[] = [
     label: "Catalysis",
     description:
       "Scalable catalytic materials drive the breaking and making of chemical bonds ” water splitting to H and the conversion of CO.",
-    technologies: ["Water splitting", "CO conversion", "Hydrogen evolution", "Electrolyser flow cells"],
+    technologies: ["Water splitting", "CO2 conversion", "Hydrogen evolution", "Electrolyser flow cells"],
   },
   {
     id: "biosensors",
@@ -397,7 +397,7 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2023,
-    "Current Prospects of Carbon-Based Nanodots in Photocatalytic CO Conversion",
+    "Current Prospects of Carbon-Based Nanodots in Photocatalytic CO2  Conversion",
     "**Sushant P. Sahu**, Christabel Adjah-Tetteh, Nagapradeep Nidamanuri, Sumit K. Sonkar, Erin U. Antia, Tam Tran, Guanguang Xia, Yudong Wang, Ryan Simon, Manas Ranjan Gartia, Supratik Mukhopadhyay, Yu Wang, Xiao-Dong Zhou",
     "Carbon Quantum Dots for Sustainable Energy and Optoelectronics",
     "10.1016/B978-0-323-90895-5.00020-5",
@@ -661,7 +661,7 @@ export const publications: Publication[] = [
   ),
   archivedPublication(
     2011,
-    "Carbon Nanoparticles as Visible-Light Photocatalysts for Efficient CO Conversion and Beyond",
+    "Carbon Nanoparticles as Visible-Light Photocatalysts for Efficient CO2  Conversion and Beyond",
     "Li Cao, **Sushant P. Sahu**, Parambath Anilkumar, Christopher E. Bunker, Juan Xu, K. A. Shiral Fernando, Ping Wang, Elena A. Guliants, Kenneth N. Tackett, Ya-Ping Sun",
     "Journal of the American Chemical Society",
     "10.1021/ja200804h",
@@ -749,7 +749,7 @@ export const facilities: Facility[] = [
     vendor: "Admiral Instruments, USA",
     description:
       "A full electrochemical workstation for controlled-potential and controlled-current experiments, supporting voltammetry, impedance and long-duration electrolysis.",
-    application: "Electrocatalysis, water splitting, CO reduction, sensor characterisation",
+    application: "Electrocatalysis, water splitting, CO2 reduction, sensor characterisation",
     figure: "potentiostat",
   },
   {
@@ -915,7 +915,7 @@ export const educationHistory = [
     institution: "Clemson University, Clemson, South Carolina",
     year: "August 2007 “ December 2014",
     detail: "GPA: 3.61 / 4.0",
-    thesis: 'Thesis: "Development of Carbon Dots in Photocatalytic CO2 Conversion"',
+    thesis: 'Thesis: "Development of Carbon Dots in Photocatalytic CO2  Conversion"',
   },
   {
     degree: "M.Sc. in Chemistry",
@@ -1054,7 +1054,7 @@ export const conferencePresentations = [
   { year: 2024, title: "Highly efficient GenX Removal by polystyrene-based ionic fluoropolymer at environmentally relevant concentrations", authors: "Sahu, S.P.; Wang, Y.", venue: "American Chemical Society National Meeting, Fall 2024", location: "Denver, USA", format: "Oral Presentation", link: "https://credentials.acs.org/e166a1da-3e0c-4f8e-96d5-b8bf561dc31e#acc.R70xm1Ib" },
   { year: 2024, title: "Engineering of iron carbide with a DNA purine base", authors: "Bhise, R.; Nidamanuri, N.; Sheikh, A.D.; Sahu, S. P.", venue: "American Chemical Society National Meeting, Fall 2024", location: "Denver, USA", format: "Oral Presentation", link: "" },
   { year: 2024, title: "Polystyrene-based ionic fluoropolymers for the removal of anionic perfluoroalkyl substances from water", authors: "Sahu, S.P.; Wang, Y.; Donnarumma, F.; Srivastava, R.", venue: "American Chemical Society National Meeting, Spring 2024", location: "New Orleans, USA", format: "Poster Presentation", link: "" },
-  { year: 2022, title: "Insights into the Role of Electrolyte Ionophore on Electrochemical Reduction of CO2", authors: "Tran, T.; Zhang, L.; Xu, N.; Xia, G.; Sahu, S.; Wang, Y.; Yu, X.; Zhou, X.-Y.", venue: "242nd ECS Meeting", location: "Atlanta, USA", format: "Abstract", link: "" },
+  { year: 2022, title: "Insights into the Role of Electrolyte Ionophore on Electrochemical Reduction of CO2 ", authors: "Tran, T.; Zhang, L.; Xu, N.; Xia, G.; Sahu, S.; Wang, Y.; Yu, X.; Zhou, X.-Y.", venue: "242nd ECS Meeting", location: "Atlanta, USA", format: "Abstract", link: "" },
   { year: 2022, title: "Ionic Fluorinated Polymers for Selective Removal of Perfluoroalkyl Substances", authors: "Sahu, S. P.; Clay, A.; Wang, Y.; Donnarumma, F.; Srivastava, R.; Gallo, A.; Junk, T.", venue: "American Chemical Society National Meeting, Spring 2022", location: "USA", format: "Oral Presentation", link: "" },
   { year: 2021, title: "Degradation of PFAS in the UV/BOHP photocatalytic system: Reactor design implications and the effect of operating parameters", authors: "Qanbarzadeh, M.; Wang, D.; Sahu, S. P.; Ateia, M.; Cates, E. L.", venue: "American Chemical Society National Meeting, Fall 2021", location: "USA", format: "Oral Presentation", link: "" },
   { year: 2021, title: "Perfluorinated Anion Exchange Polymeric Materials for Remediation of Perfluoroalkyl Species and Beyond", authors: "Sahu, S.P.; Clay, A.; Nguyen, M.; Wang, Y.", venue: "American Chemical Society National Meeting, Spring 2021", location: "USA", format: "Oral Presentation", link: "" },
