@@ -98,7 +98,7 @@ export const researchAreas: ResearchArea[] = [
     short:
       "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H2. We are also interested in CO2 electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
     description:
-      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO2 conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H2 more efficiently, with high selectivity H2 production",
+      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO2 conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H2 more efficiently, with high selectivity H2 production.",
     applications: [
       "Industrial-scale water electrolysers",
       "Fuel cell technologies",
@@ -115,7 +115,7 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrochemical sensors",
     title: "Design of Electrochemical Sensors for Healthcare and Environmental Technologies",
     short:
-      "Engineering electrode surfaces to create highly sensitive electrochemical sensors for detecting small molecules like PFAS compounds, molecularly imprinted polymers, spectro-electrochemical sensors, developing potentiometric sensors, and designing biosensors for disease-specific biomarkers through novel biochemical assays, monitoring antibody-antigen interactions",
+      "Engineering electrode surfaces to create highly sensitive electrochemical sensors for detecting small molecules like PFAS compounds, molecularly imprinted polymers, spectro-electrochemical sensors, developing potentiometric sensors, and designing biosensors for disease-specific biomarkers through novel biochemical assays, monitoring antibody-antigen interactions.",
     description:
       "Electrode surfaces are engineered to create highly sensitive electrochemical sensors for detecting small molecules such as PFAS compounds through redox processes. The programme also covers potentiometric sensors, ion-selective electrodes and biosensors, including specific biomarker detection, biochemical assays and antibody-antigen interactions.",
     applications: [
@@ -202,7 +202,7 @@ export const ecosystem: EcosystemNode[] = [
     id: "catalysis",
     label: "Catalysis",
     description:
-      "Scalable catalytic materials drive the breaking and making of chemical bonds water splitting to H2 and the conversion of CO2",
+      "Scalable catalytic materials drive the breaking and making of chemical bonds water splitting to H2 and the conversion of CO2.",
     technologies: ["Water splitting", "CO2 conversion", "Hydrogen evolution", "Electrolyser flow cells"],
   },
   {
