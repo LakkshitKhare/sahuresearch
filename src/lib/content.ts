@@ -1,6 +1,6 @@
-﻿/**
+/**
  * ============================================================
- *  SITE CONTENT ” SINGLE SOURCE OF TRUTH
+ *  SITE CONTENT - SINGLE SOURCE OF TRUTH
  * ============================================================
  *  Every fact on this website originates from this file.
  *  Nothing here is inferred beyond the professor's public
@@ -30,7 +30,7 @@ export const profile = {
 
 export const bio = {
   lead:
-    "Research at the interface of electrochemistry, nanotechnology and bioimaging ” developing electrified molecular systems, sensors and membranes for energy, environment and health.",
+    "Research at the interface of electrochemistry, nanotechnology and bioimaging, developing electrified molecular systems, sensors and membranes for energy, environment and health.",
   paragraphs: [
     "Dr. Sushant Prabhakar Sahu is Assistant Professor and Ramanujan Faculty Fellow at the Centre of Innovation and Research, Kalinga Institute of Industrial Technology (KIIT) Deemed to be University, Bhubaneswar, Odisha.",
     "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules including water splitting for hydrogen & oxygen, the reduction of CO2 , C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
@@ -96,13 +96,13 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrified molecular systems",
     title: "Electrified Molecular Systems for Sustainable Catalysis and Chemical Fuels",
     short:
-      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H. We are also interested in CO2  electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
+      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H. We are also interested in CO2 electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
     description:
-      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO2  conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H more efficiently, with high selectivity and rapid rates of production.",
+      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO2 conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H more efficiently, with high selectivity and rapid rates of production.",
     applications: [
       "Industrial-scale water electrolysers",
       "Fuel cell technologies",
-      "CO2  conversion to chemical fuels",
+      "CO2 conversion to chemical fuels",
       "High-selectivity H production",
     ],
     keywords: ["Electrocatalysis", "Water splitting", "CO2  reduction", "HER", "Electrolyser"],
@@ -117,13 +117,13 @@ export const researchAreas: ResearchArea[] = [
     short:
       "Engineering electrode surfaces to create highly sensitive electrochemical sensors for detecting small molecules like PFAS compounds, molecularly imprinted polymers, spectro-electrochemical sensors, developing potentiometric sensors, and designing biosensors for disease-specific biomarkers through novel biochemical assays, monitoring antibody-antigen interactions",
     description:
-      "Electrode surfaces are engineered to create highly sensitive electrochemical sensors for detecting small molecules such as PFAS compounds through redox processes. The programme also covers potentiometric sensors, ion-selective electrodes and biosensors, including specific biomarker detection, biochemical assays and antibody“antigen interactions.",
+      "Electrode surfaces are engineered to create highly sensitive electrochemical sensors for detecting small molecules such as PFAS compounds through redox processes. The programme also covers potentiometric sensors, ion-selective electrodes and biosensors, including specific biomarker detection, biochemical assays and antibody-antigen interactions.",
     applications: [
       "PFAS compound detection",
       "Potentiometric sensors",
       "Ion-selective electrodes",
       "Biomarker detection and biosensors",
-      "Antibody“antigen interaction assays",
+      "Antibody-antigen interaction assays",
     ],
     keywords: ["Biosensors", "Redox sensing", "Ion-selective electrodes", "PFAS", "Point-of-care"],
     figure: "sensor",
@@ -160,7 +160,7 @@ export const researchAreas: ResearchArea[] = [
     description:
       "This research aims to understand cellular processes at a nanoscale and to understand complex stem cell differentiation processes, and image tissue specimens with an unprecedented level of detail.",
     applications: [
-      "Cell membrane“molecule interactions",
+      "Cell membrane-molecule interactions",
       "Nanoscale cellular processes",
       "Plasmonic nanomaterials",
       "Tissue specimen imaging",
@@ -1046,7 +1046,6 @@ export const patents = [
 ];
 
 export const conferencePresentations = [
-  { year: 2026, title: "Monitoring Red Blood Cells Agglutination Using Screen-Printed Electrodes: A Multimodal Voltammetric and Impedimetric Study Via Antigen-Antibody Sensing Approach", authors: "Thepade, P., Faldu, D., Sahu, S. P.", venue: "1st International Online Conference on Hematology", location: "Online", format: "Accepted abstract", link: "" },
   { year: 2025, title: "Fighting fire with fire: F-rich ionic polymers to conquer PFAS", authors: "Sahu, S. P.; Wang, Y.", venue: "American Chemical Society National Meeting, Fall 2025", location: "Washington DC, USA", format: "Oral Presentation", link: "https://credentials.acs.org/4170619d-6213-42b8-8c57-9d2df5d111e6#acc.gB0YKxca" },
   { year: 2025, title: "Ru nanospheres prepared by one step hydrothermal route as an efficient hydrogen evolution reaction catalyst", authors: "Sahu, S. P.; Bhise, R.", venue: "American Chemical Society National Meeting, Fall 2025", location: "Washington DC, USA", format: "Oral Presentation", link: "https://credentials.acs.org/4170619d-6213-42b8-8c57-9d2df5d111e6#acc.gB0YKxca" },
   { year: 2025, title: "Probing structure and dynamics at cell membranes using second harmonic Generation Microscopy", authors: "Sahu, S. P.; Hamal, P.; Piers, P. P.; Nguyen, H.; Kamble, S. S.; McCarley, R. L.; Gartia, M. R.; Haber, L. H.", venue: "Global Scientific Conference: Chemistry for Health", location: "IIT Bombay", format: "Oral Presentation", link: "" },
