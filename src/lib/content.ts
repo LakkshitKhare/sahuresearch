@@ -34,7 +34,7 @@ export const bio = {
   paragraphs: [
     "Dr. Sushant Prabhakar Sahu is Assistant Professor and Ramanujan Faculty Fellow at the Centre of Innovation and Research, Kalinga Institute of Industrial Technology (KIIT) Deemed to be University, Bhubaneswar, Odisha.",
     "His research program is interdisciplinary, spanning electrocatalysis and (photo) electrochemical energy conversion, electrochemical sensors, ionic polymers and membranes, and nanoscale optical probes in imaging, sensing and catalytic applications. The work addresses two connected challenges: the efficient and selective conversion of small molecules including water splitting for hydrogen & oxygen, the reduction of CO2 , C-H activation and the sensitive detection, separation and (photo) electrochemical degradation of contaminants such as PFAS compounds and removal of toxic heavy metals from water.",
-    "His peer-reviewed work has appeared in top Q1 journals including JACS, Environmental Science & Technology, ACS Omega, J. Phys. Chem. C, ACS ES&T Engineering and Energy & Fuels, etc. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research on electrochemical sensing, optical microscopy and photocatalysis at Louisiana State University and Clemson University, USA.",
+    "His peer-reviewed work has appeared in top Q1 journals including JACS, Environmental Science & Technology, ACS Omega, J. Phys. Chem. C, ACS ES&T Engineering and Energy & Fuels, etc. Earlier in his career he served on the faculty of Amity University, Mumbai, and undertook collaborative research on Electrochemical sensing, optical microscopy and photocatalysis at Louisiana State University and Clemson University, USA.",
   ],
   facts: [
     { term: "Academic position", value: "Assistant Professor and Ramanujan Faculty Fellow" },
@@ -96,14 +96,14 @@ export const researchAreas: ResearchArea[] = [
     label: "Electrified molecular systems",
     title: "Electrified Molecular Systems for Sustainable Catalysis and Chemical Fuels",
     short:
-      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H. We are also interested in CO2 electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
+      "Developing scalable catalytic materials and tailored electrode surfaces to promote efficient and selective catalysis, biocatalysis, such as water splitting, for targeted molecule production like H2. We are also interested in CO2 electrolyzers and small molecule activation, such as the oxygen reduction reaction, nitrogen & nitrates to ammonia, methane activation and (photo) electrocatalytic degradation of water contaminants, etc.",
     description:
-      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO2 conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H more efficiently, with high selectivity and rapid rates of production.",
+      "The laboratory is pursuing the development of scalable catalytic materials and tailored electrode surfaces that promote catalysis, including water splitting and CO2 conversion, through the breaking and making of chemical bonds. The work aims to produce targeted molecules such as H2 more efficiently, with high selectivity H2 production",
     applications: [
       "Industrial-scale water electrolysers",
       "Fuel cell technologies",
       "CO2 conversion to chemical fuels",
-      "High-selectivity H production",
+      "High-selectivity H2 production",
     ],
     keywords: ["Electrocatalysis", "Water splitting", "CO2  reduction", "HER", "Electrolyser"],
     figure: "electrolyser",
@@ -202,7 +202,7 @@ export const ecosystem: EcosystemNode[] = [
     id: "catalysis",
     label: "Catalysis",
     description:
-      "Scalable catalytic materials drive the breaking and making of chemical bonds ” water splitting to H and the conversion of CO.",
+      "Scalable catalytic materials drive the breaking and making of chemical bonds water splitting to H2 and the conversion of CO2",
     technologies: ["Water splitting", "CO2 conversion", "Hydrogen evolution", "Electrolyser flow cells"],
   },
   {
@@ -1136,35 +1136,35 @@ export const alumniMentoring = [
     role: "Project Associate, Amity University",
   },
   {
-    period: "2024“2025",
+    period: "2024-2025",
     name: "Priyamvada Arte",
     currentPosition: "Current Position: R & D Intern at AgroMorph Technosolutions Private Limited, Mumbai",
     degree: "M.Tech. Biotechnology, Amity University",
     role: "",
   },
   {
-    period: "2025“2026",
+    period: "2025-2026",
     name: "Dhruv Faldu",
     currentPosition: "Current position: Pursuing B.Tech.+M.Tech. Dual Degree in Biotechnology at Amity University",
     degree: "",
     role: "",
   },
   {
-    period: "2025“2026",
+    period: "2025-2026",
     name: "Prathamesh Thepade",
     currentPosition: "Current position: Pursuing B.Tech. Degree in Biotechnology at Amity University",
     degree: "",
     role: "",
   },
   {
-    period: "2025“2026",
+    period: "2025-2026",
     name: "Dhruv Singh",
     currentPosition: "Current position: Pursuing M.Sc. Degree in Biotechnology at Amity University",
     degree: "",
     role: "",
   },
   {
-    period: "2025“2026",
+    period: "2025-2026",
     name: "Prachi Singh",
     currentPosition: "Current position: Pursuing M.Sc. Degree in Biotechnology at Amity University",
     degree: "",
