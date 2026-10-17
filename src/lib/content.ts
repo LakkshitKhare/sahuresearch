@@ -66,7 +66,7 @@ export const bio = {
     {
       period: "Prior",
       role: "Collaborative research",
-      org: "Electrochemical sensing and photocatalysis, Louisiana State University, Baton Rouge",
+      org: "Electrochemical sensing and photocatalysis, Louisiana State University and Clemson University, USA",
     },
   ],
   careerNote: "Full education and appointment history will be updated shortly.",
