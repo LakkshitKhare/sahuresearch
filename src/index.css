@@ -159,6 +159,42 @@
    COMPONENT UTILITIES
    ============================================================ */
 @layer components {
+  .construction-banner {
+    position: fixed;
+    z-index: 55;
+    inset: 0 0 auto;
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border-bottom: 1px solid rgba(117, 185, 255, 0.35);
+    background:
+      radial-gradient(ellipse at 50% 100%, rgba(36, 71, 232, 0.4), transparent 70%),
+      linear-gradient(100deg, #080d1b, #101d38 50%, #080d1b);
+    color: #f4f8ff;
+  }
+
+  .construction-banner__text {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+    animation: construction-shine 2.4s ease-in-out infinite;
+  }
+
+  .construction-banner__dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    flex: none;
+    border-radius: 50%;
+    background: #72d7ff;
+    box-shadow: 0 0 0.75rem rgba(91, 203, 255, 0.9);
+    animation: construction-pulse 1.6s ease-in-out infinite;
+  }
+
   .shell {
     width: 100%;
     max-width: 78rem;
@@ -536,6 +572,30 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes construction-shine {
+  0%,
+  100% {
+    opacity: 0.78;
+    text-shadow: 0 0 0.25rem rgba(114, 215, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 0.35rem rgba(114, 215, 255, 0.75), 0 0 1rem rgba(36, 71, 232, 0.8);
+  }
+}
+
+@keyframes construction-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

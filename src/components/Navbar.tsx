@@ -102,7 +102,7 @@ export function Navbar() {
 
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
+          "fixed inset-x-0 top-10 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
           condensed
             ? "border-b border-white/10 bg-ink/90 backdrop-blur-md"
             : "border-b border-transparent bg-transparent",

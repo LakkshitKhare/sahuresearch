@@ -47,7 +47,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="on-dark relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-[4.5rem] text-white"
+      className="on-dark relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-28 text-white"
     >
       {/* --- Background ------------------------------------------------ */}
       <MolecularField className="absolute inset-0 -z-20 h-full w-full" />

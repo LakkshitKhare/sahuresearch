@@ -17,11 +17,13 @@ import { AcademicProfile } from "@/components/AcademicProfile";
 import { Footer } from "@/components/Footer";
 import { BackToTop, ScrollProgress } from "@/components/Chrome";
 import { PhotoProvider } from "@/components/PhotoProvider";
+import { ConstructionBanner } from "@/components/ConstructionBanner";
 
 export default function App() {
   return (
     <PhotoProvider>
       <ScrollProgress />
+      <ConstructionBanner />
       <Navbar />
       <main id="main">
         <Hero />
